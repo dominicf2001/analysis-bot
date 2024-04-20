@@ -68,4 +68,10 @@ db.query(`CREATE TABLE IF NOT EXISTS types_phil (
   FOREIGN KEY(username) REFERENCES users(username)
 )`).run();
 
+if (values.f){
+    console.log("Inserting test data...");
+    db.query(`INSERT INTO users (username) VALUES ("sally")`).run();
+    db.query(`INSERT INTO types_big_five VALUES ("sally", 50, 20, 43, 80, 10)`).run();
+}
+
 console.log("Finished...");
