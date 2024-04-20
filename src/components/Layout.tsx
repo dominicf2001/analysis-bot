@@ -31,11 +31,15 @@ export const Layout = (props: LayoutProps & elements.Children) => {
           <script src='/public/htmx@1.9.5.min.js'></script>
         </head>
         <body>
+            <header id="header">
+              <h1 id="headerTitle">Analysis Bot</h1>
+            </header>
             <main>
-              <button>
+              <button id="inviteButton">
                 <a href={`${env.BOT_INVITE_LINK}`}>Invite</a> 
               </button>
             </main>
+            <footer id="footer"></footer>
         </body>
       </html>
     )

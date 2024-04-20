@@ -1,3 +1,49 @@
-a {
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body>#container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: #017FC0;
+}
+
+footer {
+    background-color: #017FC0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#inviteButton {
+    display: block;
+    margin: auto;
+}
+
+#inviteButton a {
+    color: #FBEDF4;
+}
+
+#headerTitle {
+    width: max-content;
+    display: block;
+    margin: auto;
     color: #FBEDF4;
 }
