@@ -5,7 +5,6 @@ import { createElysia } from './utils/elysia';
 
 const server = createElysia()
   .use(staticPlugin())
-
   // Routes
   .use(app);
 

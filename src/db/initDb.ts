@@ -1,6 +1,7 @@
 import Database from "bun:sqlite";
 import { parseArgs } from "util";
-
+import { env } from "../env"
+ 
 const { values } = parseArgs({
   args: Bun.argv,
   options: {
@@ -12,7 +13,7 @@ const { values } = parseArgs({
   allowPositionals: true
 });
 
-const db = new Database("db.sqlite");
+const db = new Database(env.DB_URL);
 
 // delete tables
 if (values.f){

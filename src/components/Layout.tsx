@@ -24,7 +24,9 @@ export const Layout = (props: LayoutProps & elements.Children) => {
           <link href='/public/globals.css' rel='stylesheet' />
           <script src='/public/htmx@1.9.5.min.js'></script>
         </head>
-        <body>{props.children}</body>
+        <body>
+            <a href=""></a> 
+        </body>
       </html>
     )
   );
