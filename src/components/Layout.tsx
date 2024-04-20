@@ -1,4 +1,5 @@
-import type * as elements from 'typed-html';
+// import type * as elements from 'typed-html';
+import { env } from "../env"
 
 type LayoutProps = {
   title?: string;
@@ -6,6 +7,7 @@ type LayoutProps = {
 
 export const Layout = (props: LayoutProps & elements.Children) => {
   const { title = 'analyzer' } = props;
+
   return (
     '<!DOCTYPE html>' +
     (
@@ -25,7 +27,7 @@ export const Layout = (props: LayoutProps & elements.Children) => {
           <script src='/public/htmx@1.9.5.min.js'></script>
         </head>
         <body>
-            <a href=""></a> 
+            <a href={`${env.BOT_INVITE_LINK}`}></a> 
         </body>
       </html>
     )

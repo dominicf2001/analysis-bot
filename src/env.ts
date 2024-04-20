@@ -10,6 +10,7 @@ const envVariables = z.object({
     .enum(['development', 'production', 'test'])
     .default('development'),
   PORT: z.coerce.number().default(3000),
+  BOT_INVITE_LINK: z.literal("https://discord.com/oauth2/authorize?client_id=1231335459997749389")
 });
 
 export const env = envVariables.parse(process.env);

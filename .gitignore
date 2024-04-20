@@ -1,4 +1,5 @@
 node_modules/
+.env
 
 # Ignore Visual Studio Code directories
 .vscode/
@@ -12,7 +13,7 @@ node_modules/
 !.vscode/extensions.json
 
 # Ignore virtual environments
-.venv/
+venv/
 
 # Ignore id
 dc_id.txt

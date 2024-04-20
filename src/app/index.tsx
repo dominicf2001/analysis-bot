@@ -3,7 +3,6 @@ import { swagger } from '@elysiajs/swagger';
 import { Layout } from '../components/Layout';
 import { createElysia } from '../utils/elysia';
 import { env } from "../env"
-import { User } from '../db/models';
 import Database from "bun:sqlite";
 
 const db = new Database(env.DB_URL);
