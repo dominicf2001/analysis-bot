@@ -35,10 +35,21 @@ footer {
 #inviteButton {
     display: block;
     margin: auto;
+    width: 20%;
 }
 
 #inviteButton a {
     color: #FBEDF4;
+}
+
+#introSection {
+    margin: 5%;
+}
+
+#introSection p {
+    margin: auto;
+    display: block;
+    width: 75%;
 }
 
 #headerTitle {
