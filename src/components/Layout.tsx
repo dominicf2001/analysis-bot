@@ -24,10 +24,18 @@ export const Layout = (props: LayoutProps & elements.Children) => {
           ></link>
           <title>{title}</title>
           <link href='/public/globals.css' rel='stylesheet' />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+          />
           <script src='/public/htmx@1.9.5.min.js'></script>
         </head>
         <body>
-            <a href={`${env.BOT_INVITE_LINK}`}></a> 
+            <main>
+              <button>
+                <a href={`${env.BOT_INVITE_LINK}`}>Invite</a> 
+              </button>
+            </main>
         </body>
       </html>
     )
