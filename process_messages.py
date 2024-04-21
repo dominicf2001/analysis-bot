@@ -10,6 +10,8 @@ from nltk.stem import WordNetLemmatizer
 import pandas as pd
 import process_messages as pm
 
+from datetime import datetime
+
 import csv
 
 
@@ -161,6 +163,23 @@ def load_json_file():
     with open("parsed_messages.json", "r") as file:
         sample_data = json.load(file)
     return sample_data
+
+
+def user_messages_and_time(user_id, messages):
+    user_messages = []
+    for message in messages:
+        if message["user_id"] == user_id:
+            timestamp = message["timestamp"]
+            timestamp = datetime.strptime(timestamp, "%m/%d/%Y %I:%M%p")
+            user_messages.append({
+                "user_id": str(message.user_id),
+                "author": message["author"],
+                "timestamp": timestamp.strftime("%Y-%m-%d %H:%M:%S"),
+                "message": message["message"]
+            })     
+
+    print(user_messages)
+    return user_messages
 
 
 #####

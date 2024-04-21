@@ -54,6 +54,8 @@ def evaluate_data():
         prediction = tm.clf.predict(tfidf)
         predictions.append(prediction[0])
 
+        
+
     # Store the predictions in the 'sentiment' column
 
     print(predictions)
