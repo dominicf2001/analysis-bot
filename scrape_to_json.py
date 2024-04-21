@@ -8,7 +8,7 @@ def scrape_to_json():
     channel_id = input("Channel id: ")
     html_file_name = "scraped_messages.html"
 
-    command = "sudo docker run --rm -v /home/gert/Projects/analysis-bot/output:/out tyrrrz/discordchatexporter:latest export -t " + user_token + " -c " + channel_id + " -o " + html_file_name
+    command = "sudo docker run --rm -v analysis-bot/output:/out tyrrrz/discordchatexporter:latest export -t " + user_token + " -c " + channel_id + " -o " + html_file_name
 
 
     output = subprocess.run(command, shell=True, capture_output=True, text=True)
