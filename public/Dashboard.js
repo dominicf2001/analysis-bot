@@ -87,7 +87,7 @@ function renderServerGraph(users) {
     svg
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
-      .append("g")
+        .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
     const line = d3.line()
@@ -97,7 +97,7 @@ function renderServerGraph(users) {
     svg.append("path")
         .datum(data)
         .attr("fill", "none")
-        .attr("stroke", "steelblue")
+        .attr("stroke", "green")
         .attr("stroke-width", 2)
         .attr("d", line);
 

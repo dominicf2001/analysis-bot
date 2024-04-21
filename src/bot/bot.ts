@@ -1,8 +1,10 @@
 // import discord.js
 import { Client, Events, GatewayIntentBits, TextChannel, messageLink } from 'discord.js';
+import Database from "bun:sqlite";
 
 // create a new Client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const db = new Database("../db/db.sqlite");
 
 // listen for the client to be ready
 client.once(Events.ClientReady, (c) => {
@@ -22,6 +24,7 @@ client.on('interactionCreate', async interaction => {
 
         //prints server id
         const guildId = interaction.guild.id;
+        db.query("insert or replace into servers values(?, ?)").run(guildId, channelIds.toString());
     }
 });
 // login with the token from .env.local

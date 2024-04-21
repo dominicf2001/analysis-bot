@@ -24,7 +24,6 @@ if (values.f){
     });
 }
 
-
 console.log("Creating tables...");
 
 // Recreate tables
