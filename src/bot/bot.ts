@@ -1,5 +1,5 @@
 // import discord.js
-import { Client, Events, GatewayIntentBits } from 'discord.js';
+import { Client, Events, GatewayIntentBits, TextChannel, messageLink } from 'discord.js';
 
 // create a new Client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -14,8 +14,14 @@ client.once(Events.ClientReady, (c) => {
 client.on('interactionCreate', async interaction => {
     if (!interaction.isChatInputCommand()) return;
 
-    if (interaction.commandName === 'ping') {
-        await interaction.reply('Pong!');
+    if (interaction.commandName === 'init') {
+        //prints text channel id's
+        const channels = Array.from(client.channels.cache.values())
+        const channelIds = channels.filter(channel => channel.type == 0).map(channel => channel.id);
+        await interaction.reply('channel.id');
+
+        //prints server id
+        const guildId = interaction.guild.id;
     }
 });
 // login with the token from .env.local
