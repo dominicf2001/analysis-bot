@@ -2,9 +2,11 @@
 import { env } from "../env"
 
 type DashboardProps = {
+  serverId: string;
 };
 
 export const Dashboard = (props: DashboardProps & elements.Children) => {
+  const serverId = props.serverId;
   return (
     (
       <>
@@ -20,9 +22,10 @@ export const Dashboard = (props: DashboardProps & elements.Children) => {
 
         <section>
           <div style="display: none;" id="serverView">
-            <section _="
+            <section data-server_id={serverId} _="
                       on load from window
-                      fetch 'users'
+                      set serverId to my [@data-serverId]
+                      fetch `users/${serverId}`
                       then call renderServerGraph(it)">
               <svg id="serverGraph" width="1000" height="600"></svg>
             </section>
@@ -31,9 +34,11 @@ export const Dashboard = (props: DashboardProps & elements.Children) => {
           <div id="usersView" class="grid">
             <section>
               <table 
+                  data-server_id={props.serverId}
                   id="userTable" _="
                     on load from window
-                    fetch 'users'
+                    set serverId to my [@data-serverId]
+                    fetch `users/${serverId}`
                     then call populateUsersTable(it)">
                 <thead>
                   <tr>

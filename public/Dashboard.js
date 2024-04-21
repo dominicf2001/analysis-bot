@@ -1,4 +1,5 @@
 function renderUsersView(){
+
     const usersViewButton = document.querySelector("#usersViewButton");
     const serverViewButton = document.querySelector("#serverViewButton");
 
@@ -61,6 +62,7 @@ function populateUsersTable(userData) {
 }
 
 function renderServerGraph(users) {
+    console.log(users);
     const data = [
         { date: new Date(2020, 0, 1), value: 30 },
         { date: new Date(2020, 1, 1), value: 50 },

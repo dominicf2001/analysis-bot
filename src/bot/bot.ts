@@ -24,8 +24,13 @@ client.on('interactionCreate', async interaction => {
 
         //prints server id
         const guildId = interaction.guild.id;
-        db.query("insert or replace into servers values(?, ?)").run(guildId, channelIds.toString());
+        db.query("insert or replace into servers values(?, ?)").run(obfuscateServerId(guildId), channelIds.toString());
     }
 });
 // login with the token from .env.local
 client.login(process.env.DISCORD_TOKEN);
+
+function obfuscateServerId(id: string){
+    // do obsucation logic
+    return id;
+}
