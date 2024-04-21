@@ -1,5 +1,7 @@
 // import type * as elements from 'typed-html';
 import { env } from "../env"
+import { Dashboard } from "./Dashboard";
+import { Home } from "./Home";
 
 type LayoutProps = {
   title?: string;
@@ -24,25 +26,20 @@ export const Layout = (props: LayoutProps & elements.Children) => {
           ></link>
           <title>{title}</title>
           <link href='/public/globals.css' rel='stylesheet' />
+          <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
           <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
           />
           <script src='/public/htmx@1.9.5.min.js'></script>
+          <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
         </head>
         <body>
             <header id="header">
               <h1 id="headerTitle">Analysis Bot</h1>
             </header>
             <main>
-              <section id="introSection">
-                <p>Hello Test Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              </section>
-              <section>
-                <button id="inviteButton">
-                  <a href={`${env.BOT_INVITE_LINK}`}>Invite</a> 
-                </button>
-              </section>
+              {props.children}
             </main>
             <footer id="footer"></footer>
         </body>

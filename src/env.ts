@@ -10,7 +10,7 @@ const envVariables = z.object({
     .enum(['development', 'production', 'test'])
     .default('development'),
   PORT: z.coerce.number().default(3000),
-  BOT_INVITE_LINK: z.string()
+  BOT_INVITE_LINK: z.string().min(1)
 });
 
 export const env = envVariables.parse(process.env);
