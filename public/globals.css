@@ -58,3 +58,29 @@ footer {
     margin: auto;
     color: #FBEDF4;
 }
+
+#userTable {
+    width: 50%;
+    margin: auto;
+}
+
+.userRowLink {
+    cursor: pointer;
+}
+
+.selected {
+    opacity: 50%;
+}
+
+#viewButtonContainer {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    margin: auto;
+    margin-bottom: 4%;
+}
+
+#serverGraph {
+    display: block;
+    margin: auto;
+}
