@@ -1,6 +1,6 @@
 import Database from "bun:sqlite";
 import { parseArgs } from "util";
-import { env } from "../env"
+// import { env } from "../env"
  
 const { values } = parseArgs({
   args: Bun.argv,
@@ -13,7 +13,7 @@ const { values } = parseArgs({
   allowPositionals: true
 });
 
-const db = new Database(env.DB_URL);
+const db = new Database("./db.sqlite");
 
 // delete tables
 if (values.f){
@@ -29,33 +29,33 @@ console.log("Creating tables...");
 
 // Recreate tables
 db.query(`CREATE TABLE IF NOT EXISTS users (
-  username TEXT PRIMARY KEY
+  user_id TEXT PRIMARY KEY
 )`).run();
 
 // BIG FIVE
 db.query(`CREATE TABLE IF NOT EXISTS types_big_five (
-  username TEXT,
-  neuro INTEGER,
-  extrav INTEGER,
-  open INTEGER,
-  agree INTEGER,
-  con INTEGER,
-  FOREIGN KEY(username) REFERENCES users(username)
+  user_id TEXT,
+  neuroticsm INTEGER,
+  extraversion INTEGER,
+  openness INTEGER,
+  agreeableness INTEGER,
+  conscientiousness INTEGER,
+  FOREIGN KEY(user_id) REFERENCES users(user_id)
 )`).run();
 
 // F TYPES
 db.query(`CREATE TABLE IF NOT EXISTS types_f (
-  username TEXT,
+  user_id TEXT,
   a INTEGER,
   b INTEGER,
   c INTEGER,
   d INTEGER,
-  FOREIGN KEY(username) REFERENCES users(username)
+  FOREIGN KEY(user_id) REFERENCES users(user_id)
 )`).run();
 
 // PHIL TYPES
 db.query(`CREATE TABLE IF NOT EXISTS types_phil (
-  username TEXT,
+  user_id TEXT,
   stoic INTEGER,
   nihil INTEGER,
   absurd INTEGER,
@@ -66,13 +66,13 @@ db.query(`CREATE TABLE IF NOT EXISTS types_phil (
   determine INTEGER,
   object INTEGER,
   util INTEGER,
-  FOREIGN KEY(username) REFERENCES users(username)
+  FOREIGN KEY(user_id) REFERENCES users(user_id)
 )`).run();
 
 if (values.f){
     console.log("Inserting test data...");
-    db.query(`INSERT INTO users (username) VALUES ("sally")`).run();
-    db.query(`INSERT INTO types_big_five VALUES ("sally", 50, 20, 43, 80, 10)`).run();
+    db.query(`INSERT INTO users (user_id) VALUES ("1234")`).run();
+    db.query(`INSERT INTO types_big_five VALUES ("1234", 50, 20, 43, 80, 10)`).run();
 }
 
 console.log("Finished...");
