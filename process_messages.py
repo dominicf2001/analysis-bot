@@ -7,6 +7,13 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
+import pandas as pd
+import process_messages as pm
+
+read_data = pd.read_csv('sentiment_training_processed.csv')
+#write_data = pd.read_csv('sentiment_evaluation.csv')
+
+
 
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -45,8 +52,8 @@ def remove_stop_words(tokens):
     filtered_words = []
 
     for word in non_stop_words:
-        if "/" not in word and "\\" not in word and "-" not in word and "'" not in word and "http" not in word and "." not in word:
-            filtered_words.append(word)
+        if "/" not in word and "\\" not in word and "-" not in word and "'" not in word and "http" not in word and "." not in word and not "="  in word and not "_" in word:
+            filtered_words.append(word.lower())
 
     return filtered_words
 
@@ -86,8 +93,12 @@ def remove_nouns(tokens):
     return non_noun_tokens
 
 
-def sanitize_lemmas(lemmas):
-    return None
+def tokens_to_csv(tokens):
+    processed_texts = []
+    for token in tokens:
+        if token:
+            processed_texts.append(' '.join(token))
+    return processed_texts
 
 #####
 
@@ -120,4 +131,10 @@ lemmatized_words = remove_non_words(lemmatize_words(tagged_tokens))
 
 print("\nLemmatized words:\n", lemmatized_words)
 
+write_data = pd.DataFrame({
+    'evaluated_text': lemmatized_words,
+    'sentiment': None
+})
+
+write_data.to_csv('sentiment_training.csv', index=False)
 
