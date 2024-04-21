@@ -20,7 +20,7 @@ x = df['text']
 y = df['sentiment']
 
 # Splitting the dataset
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=None)
 
 # Feature extraction using CountVectorizer and TfidfTransformer
 count_vectorizer = CountVectorizer()
@@ -36,4 +36,7 @@ x_test_counts = count_vectorizer.transform(x_test)
 x_test_tfidf = tfidf_transformer.transform(x_test_counts)
 y_pred = clf.predict(x_test_tfidf)
 
-print(classification_report(y_test, y_pred))
+report = classification_report(y_test, y_pred)
+
+
+

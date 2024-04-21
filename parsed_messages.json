@@ -1,722 +1,368 @@
 [
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/28/2024 5:24\u202fPM",
-        "message": "@Terrelle Tettey Josh said to just leave the emails as plain text"
+        "user_id": "",
+        "author": "",
+        "timestamp": "",
+        "message": ""
     },
     {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/28/2024 5:26\u202fPM",
-        "message": ". Do we still use id (int) as a primary key?"
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/20/2024 5:23\u202fPM",
+        "message": "https://apify.com/curious_coder/discord-data-scraper/api/client/nodejs"
+    },
+    {
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/20/2024 5:23\u202fPM",
+        "message": ""
+    },
+    {
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/20/2024 6:07\u202fPM",
+        "message": "https://wevo.ai/takeapulse/?campaignid=20927810631&adgroupid=&adid=&utm_source=google&utm_medium=cross_network&utm_term=&utm_campaign=wevo_performance_max_us_canada&hsa_kw=&hsa_mt=&hsa_cam=20927810631&hsa_src=x&hsa_acc=2271504158&hsa_ad=&hsa_ver=3&hsa_grp=&hsa_tgt=&hsa_net=adwords&gad_source=1&gclid=CjwKCAjwz42xBhB9EiwA48pT7-OjXuQmG7ywJQyWMRjpqrM8p1LNAL_ZKxDCY354N_4AKe2sMsO3fRoCVmsQAvD_BwE\n\nAnalyzes website/wireframe once we make it to help analyze/suggest improvements making the website more friendly"
+    },
+    {
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/20/2024 7:28\u202fPM",
+        "message": "https://www.youtube.com/watch?v=_jnG_EJSFBU&ab_channel=AnsontheDeveloper"
+    },
+    {
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/20/2024 7:28\u202fPM",
+        "message": "https://stackoverflow.com/questions/47947782/discordjs-fetch-all-channelsid-from-serverid?rq=3"
+    },
+    {
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/20/2024 8:18\u202fPM",
+        "message": "git reset HEAD path/to/unwanted_file"
+    },
+    {
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/20/2024 9:08\u202fPM",
+        "message": "https://www.pcworld.com/article/2308047/scraper-spies-on-600-million-discord-users-and-sells-the-data.html"
+    },
+    {
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/20/2024 9:22\u202fPM",
+        "message": "https://en.wikipedia.org/wiki/Linear_programming#Simplex_algorithm_of_Dantzig"
     },
     {
         "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/28/2024 5:35\u202fPM",
-        "message": "That's up to us. I'd personally rather use the email string. Probably everything before @kent.edu\n\nIt will just be easier to identify a user throughout a system, and we won't have to worry about generating integer ids"
+        "author": "Gert",
+        "timestamp": "4/20/2024 10:44\u202fPM",
+        "message": "import { $ } from \"bun\";\n\nasync function exportDiscordChat() {\n    try {\n        // Output the result of the command to shell\n        await $cat ./gaming.txt;\n    } catch (error) {\n        console.error(\"Error:\", error);\n    }\n}\n\nexportDiscordChat();"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/28/2024 5:35\u202fPM",
-        "message": "The credentials tuple could be something like:\n\nEmail                  | ID     | Password\nabc@kent.edu | abc | hash(password)\n\nThen we use ID to handle access control"
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/20/2024 11:14\u202fPM",
+        "message": ""
     },
     {
-        "user_id": "big_gert",
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/20/2024 11:23\u202fPM",
+        "message": "https://www.nltk.org/"
+    },
+    {
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/20/2024 11:23\u202fPM",
+        "message": "https://www.datacamp.com/tutorial/text-analytics-beginners-nltk"
+    },
+    {
+        "user_id": "awkward0001",
         "author": "None",
         "timestamp": "None",
-        "message": "If you think an integer id adds more utility lmk. I just don't see how it's more useful than just a string"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/28/2024 7:15\u202fPM",
-        "message": "Okay , I think we could work with your suggestion."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/6/2024 5:04\u202fPM",
-        "message": "@ashtoncorsello \n\nHe said to prioritize ease of use over security. So we are going to abandon encryption.\n\nThis makes our lives a lot easier"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/6/2024 5:04\u202fPM",
-        "message": "Now we can handle access control with a lab password, but we the password will only need to be typed once. After a user is let in, we will add an entry to the lab permissions table"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/7/2024 8:36\u202fPM",
-        "message": "Are we all meeting in the office today (during class time) or we should meet go to class and meet after? @Garrett Stallsmith @ashtoncorsello"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/7/2024 9:34\u202fPM",
-        "message": "MYSQL Installation\nhttps://dev.mysql.com/doc/refman/8.0/en/installing.html"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/8/2024 5:37\u202fPM",
-        "message": "I just pushed the changes with docker set up already. @ashtoncorsello , Garrett and I were discussing using Mysql instead of sqlite as agreed on earlier. We plan to use an ORM (Object relational Mapping) called Peewee which should make the database development process easier.\n\nDocumentation:\nhttp://docs.peeweeorm.com/en/latest/peewee/quickstart.html#model-definition"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/8/2024 6:06\u202fPM",
         "message": ""
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/8/2024 6:06\u202fPM",
+        "user_id": "the_king_of_carrot_flowers",
+        "author": "carrot",
+        "timestamp": "4/21/2024 12:10\u202fAM",
         "message": ""
     },
     {
-        "user_id": "big_gert",
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 12:39\u202fAM",
+        "message": "Stressed\nOverwhelmed\nAnnoyed\nNervous\nUnsure\nSorry\nWorried\nAfraid\nHesitant\nFrustrated\nTired\nUpset\nDoubtful\nPanicked\nDistressed\nTroubled\nUncomfortable\nConfused\nAgitated\nHelpless\nSad\nGuilty\nRegretful\nApprehensive\nAnxious"
+    },
+    {
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 12:39\u202fAM",
+        "message": "Kind\nCooperative\nSympathetic\nFriendly\nCompassionate\nTrustworthy\nWarm\nConsiderate\nGenerous\nHelpful\nPatient\nUnderstanding\nPolite\nSincere\nAltruistic\nGentle\nCourteous\nAmiable\nLoyal\nSupportive\nRespectful\nAffectionate\nGrateful\nEasygoing\nPeaceful"
+    },
+    {
+        "user_id": "awkward0001",
         "author": "None",
         "timestamp": "None",
+        "message": "Thanks\nPlease\nAppreciate\nWelcome\nAbsolutely\nDefinitely\nHappy\nWonderful\nLovely\nGreat\nSure\nTogether\nCaring\nShare\nSupport\nUnderstand\nRespect\nKindly\nPeace\nHarmony\nBless\nGrateful\nPleased\nGenerous\nCompassionate"
+    },
+    {
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 1:49\u202fAM",
+        "message": "https://discord.com/oauth2/authorize?client_id=1231407726848905267&permissions=274877975552&scope=bot+applications.commands"
+    },
+    {
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 2:15\u202fAM",
         "message": ""
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/8/2024 6:24\u202fPM",
-        "message": "Here's the rewritten schema with improved clarity on the relationships between data:\n\nCREATE TABLE Users (\n    user_id TEXT PRIMARY KEY,\n    email TEXT UNIQUE NOT NULL\n);\n\nCREATE TABLE Groups (\n    group_id INTEGER PRIMARY KEY,\n    lab_id INTEGER NOT NULL,\n    group_name TEXT NOT NULL,\n    FOREIGN KEY (lab_id) REFERENCES Labs(lab_id)\n);\n\nCREATE TABLE LabPermissions (\n    user_id TEXT NOT NULL,\n    lab_id INTEGER NOT NULL,\n    lab_admin INTEGER NOT NULL,\n    FOREIGN KEY (user_id) REFERENCES Users(user_id),\n    FOREIGN KEY (lab_id) REFERENCES Labs(lab_id),\n    PRIMARY KEY (user_id, lab_id)\n);\n\nCREATE TABLE Labs (\n    lab_id INTEGER PRIMARY KEY,\n    lab_name TEXT NOT NULL UNIQUE\n);\n\nHere are the changes made:\n\n1. Renamed table \"Credentials\" to \"Users\" for clarity.\n2. Renamed table \"Lab-Permissions\" to \"LabPermissions\" for consistency and readability.\n3. Changed the data type of \"lab_id\" in \"LabPermissions\" to INTEGER to match the type in \"Groups\" and \"Labs\" tables for consistency.\n4. Added foreign key constraints to enforce referential integrity between tables.\n5. Made \"user_id\" and \"lab_id\" in \"LabPermissions\" table a composite primary key to ensure each combination is unique.\n6. Removed redundant PRIMARY KEY declaration in the \"Groups\" table since it's a composite key with \"group_id\" as PRIMARY KEY.\n7. Adjusted the table creation order to ensure foreign key constraints are properly referenced."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/8/2024 6:46\u202fPM",
-        "message": "from peewee import *\n\nDefine your database connectiondatabase = SqliteDatabase('yourdatabasename.db')\n\nDefine your modelsclass BaseModel(Model):\n    class Meta:\n        database = database\n\nclass Users(BaseModel):\n    user_id = CharField(primary_key=True)\n    email = CharField(unique=True)\n\nclass Groups(BaseModel):\n    group_id = AutoField(primary_key=True)\n    lab_id = IntegerField()\n    group_name = CharField()\n    \n    class Meta:\n        indexes = (\n            (('lab_id', 'group_name'), True),\n        )\n\nclass LabPermissions(BaseModel):\n    user_id = ForeignKeyField(Users)\n    lab_id = ForeignKeyField(Groups)\n    lab_admin = BooleanField()\n\n    class Meta:\n        primary_key = CompositeKey('user_id', 'lab_id')\n\nclass Labs(BaseModel):\n    lab_id = AutoField(primary_key=True)\n    lab_name = CharField(unique=True)\n\nCreate tables if they do not existdef create_tables():\n    with database:\n        database.create_tables([Users, Groups, LabPermissions, Labs])\n\nDrop tables if they existdef drop_tables():\n    with database:\n        database.drop_tables([Users, Groups, LabPermissions, Labs])\n\nExample of usageif __name == 'main':\n    # Create tables\n    create_tables()"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/12/2024 12:39\u202fAM",
-        "message": "Just thought I'd put this here for reference\n\nDocker Notes\nSetup on Windows\nhttps://docs.docker.com/docker-for-windows/install\n\nMac\nhttps://docs.docker.com/docker-for-mac/install\n\nType these 2 commands to check if the installation is complete\ndocker version\n\ndocker compose version\n\nIf all is good, do:\ndocker run hello-world\n\nIf it\u2019s successful, then you\u2019re all set with the setup.\n\n\n\nFOR OUR PROJECT:\ndocker build -t microqr_image .\ndocker run --name microqr -e TESTING=true -p \"8080:5000\" -d microqr_image\nthe above command should make it run on localhost:8080"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/12/2024 7:16\u202fPM",
-        "message": "@Garrett Stallsmith @ashtoncorsello we still meeting during class time at smith?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/12/2024 7:28\u202fPM",
-        "message": "Yes but ill be a little late. If you come at 4 I\u2019ll be in smith"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/12/2024 7:43\u202fPM",
-        "message": "Okay"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/12/2024 10:47\u202fPM",
-        "message": "DOCKER COMMANDS\nWith the new changes, when you clone the repo, starting the application will be way easier:\n\nDo\ndocker compose up -d // this runs our project\ndocker compose down // for when we want to stop it\ndocker compose build // for rebuilding when changes are made to our app\n\nand @Garrett Stallsmith , here's the video on Peewee \n\nhttps://youtu.be/CsYRcjsCV34?si=BxAJ-AxblhAf2cvt"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "3/13/2024 12:35\u202fAM",
-        "message": "Hey guys, sorry I didn\u2019t make it today. Had some stuff going on. I\u2019ll be able to meet after class on Thursday for a little bit and then I don\u2019t have anything going on Friday so I can stay as long as needed."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/13/2024 3:43\u202fPM",
-        "message": "@Terrelle Tettey @ashtoncorsello I have some free time between 4-5:15 today if you guys wanted to stop to work on the project"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/13/2024 7:59\u202fPM",
-        "message": "Sure! I could make some time."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/14/2024 12:35\u202fAM",
-        "message": "We should merge the database branch with main"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/14/2024 12:35\u202fAM",
-        "message": "Probably after we put the tables in"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/14/2024 6:41\u202fPM",
-        "message": "https://www.youtube.com/watch?v=rIrNIzy6U_g&ab_channel=Fireship"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/15/2024 5:46\u202fPM",
-        "message": "Authlib==1.3.0\nblinker==1.7.0\ncertifi==2024.2.2\ncffi==1.16.0\ncharset-normalizer==3.3.2\nclick==8.1.7\ncolorama==0.4.6\ncontourpy==1.2.0\ncryptography==42.0.5\ncycler==0.12.1\nFlask==3.0.2\nfonttools==4.49.0\nidna==3.6\nimportlib-metadata==7.0.1\nimportlib_resources==6.1.2\nitsdangerous==2.1.2\nJinja2==3.1.3\nkiwisolver==1.4.5\nMarkupSafe==2.1.5\nmatplotlib==3.8.3\nnumpy==1.26.4\nopencv-python==4.9.0.80\npackaging==23.2\npeewee==3.17.1\npillow==10.2.0\npycparser==2.21\nPyMySQL==1.1.0\npyparsing==3.1.1\npython-dateutil==2.9.0.post0\npython-dotenv==1.0.1\nrequests==2.31.0\nsix==1.16.0\nsvgwrite==1.4.3\nurllib3==2.2.1\nWerkzeug==3.0.1\nzipp==3.17.0"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/16/2024 9:44\u202fPM",
-        "message": "It seems I\u2019m still having MySQL improperly configured issue so maybe @Garrett Stallsmith is it possible to use one of your machines at work this Tuesday (if I still don\u2019t have it resolved)"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/16/2024 10:26\u202fPM",
-        "message": "You got it"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/16/2024 10:32\u202fPM",
-        "message": "Awesome"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/19/2024 7:54\u202fPM",
-        "message": "Are y\u2019all in the office atm @Garrett Stallsmith @ashtoncorsello"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/19/2024 7:54\u202fPM",
-        "message": "I'm in here, Ashton isn't"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/26/2024 10:48\u202fPM",
-        "message": "@Garrett Stallsmith @ashtoncorsello does anyone want to meet via discord this evening? If not , what time(s) do you suggest?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/2/2024 7:47\u202fPM",
-        "message": "@Garrett Stallsmith is your office open?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/2/2024 7:48\u202fPM",
-        "message": "Yes"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/2/2024 8:20\u202fPM",
-        "message": "@Garrett Stallsmith @Terrelle Tettey will you guys be at the office after class?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/2/2024 8:23\u202fPM",
-        "message": "Yes"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/4/2024 10:43\u202fPM",
-        "message": "@Terrelle Tettey"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/4/2024 11:06\u202fPM",
-        "message": "Sure! We can go with CentOS."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/5/2024 1:36\u202fAM",
-        "message": "That\u2019s the beauty of docker right. He could have said anything it would be fine"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/5/2024 1:36\u202fAM",
-        "message": "I guess it matters for testing"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/5/2024 2:12\u202fAM",
-        "message": "Yeah I personally went with CentOS because I\u2019ve worked with that and didn\u2019t want any unforeseen issues with compatibility"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/5/2024 8:25\u202fPM",
-        "message": "I now understand the beauty of docker"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/7/2024 12:43\u202fAM",
-        "message": "Not sure if you\u2019ve covered this yet but where can I find the data attributes to be displayed for both fetching and creating qrs ?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/7/2024 12:57\u202fAM",
-        "message": "Creating has not been implemented yet, but fetching them will be in the app.py, there\u2019s a variable called value = do_stuff() and that value is a dictionary that is {1:qrdata, 2:qrdata\u2026} and is in order from top left to bottom right"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/7/2024 12:58\u202fAM",
-        "message": "Got it thanks"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/9/2024 10:46\u202fPM",
-        "message": "Finally been able to setup a gui for viewing db @Garrett Stallsmith"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/9/2024 11:01\u202fPM",
-        "message": "I\u2019ll push the changes to apiEndpoints then after restart the container and anyone should be able to login with \n\nHostname: localhost\nUsername: root\nPassword: myrootpassword \nPort:  3306\n\nwith an sql viewer extension"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/10/2024 12:42\u202fAM",
-        "message": "tomorrow in the branch \"Ashton\", I will push all my changes. It will be a pretty big push, so if someone want's to hop on a call we can go through merging together so nothing gets messed up"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/10/2024 1:12\u202fAM",
-        "message": "You have to show me how"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/10/2024 1:13\u202fAM",
-        "message": "I\u2019ll be in the IT office from 11-5 if you wanted to do it in person"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/10/2024 2:59\u202fAM",
-        "message": "I can stop by at 3 tomorrow to continue working on the project and show you then"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/10/2024 2:59\u202fAM",
-        "message": "If that works"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/10/2024 5:01\u202fPM",
-        "message": "I can't do 3 anymore, something came up with IT. How does 4 sound instead?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/10/2024 5:40\u202fPM",
-        "message": "Sure! We can create a remote meeting"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/10/2024 7:55\u202fPM",
-        "message": "I can\u2019t meet right now. I\u2019m too busy with work"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/10/2024 7:58\u202fPM",
-        "message": "Does 4 work? @ashtoncorsello"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/10/2024 10:18\u202fPM",
-        "message": "Alright so I got a lot of things working on my end. Right now, when you upload an image it returns the image and on each image there is a number (1-n). There is a dictionary printed next to it with the ID number that corresponds with the QR data. This dictionary is stored in \u201cids\u201d in the homepage function in app.py. Also, there is now the ability to click on each individual qr code and you can receive the information attached to it. It is currently simply taking you to a missing webpage that is called \u201cid\u201d.html. Once we decide how we want to handle that I will make the function. My code is in Ashton-Dev branch. I\u2019m currently working on testing the combining of my code with the current main branch, will update once it\u2019s ready. I\u2019m building the docker image, it\u2019s taking a really long time so be prepared for that when it\u2019s time to build. Lastly, I\u2019m utilizing Chrome because the clicking on the QR codes isn\u2019t working well in safari"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/11/2024 1:23\u202fAM",
-        "message": "It\u2019s all working now. If you clone my branch and build the docker image there should be no problems!"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/13/2024 12:36\u202fAM",
-        "message": "@Terrelle Tettey What say you to meeting at the IT office at 1pm tomorrow?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/13/2024 2:02\u202fAM",
-        "message": "That works"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/13/2024 3:25\u202fPM",
-        "message": "can i join a discord call with u guys around then?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/13/2024 3:50\u202fPM",
-        "message": "Fine with me"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/13/2024 4:28\u202fPM",
-        "message": "More like 1;30"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/13/2024 4:49\u202fPM",
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 2:15\u202fAM",
         "message": ""
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/13/2024 5:18\u202fPM",
-        "message": "@Terrelle Tettey I\u2019m getting starbucks do you want anything?"
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 3:08\u202fAM",
+        "message": "/ping"
     },
     {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/13/2024 5:27\u202fPM",
-        "message": "I\u2019m good; preciate it tho . I should be there in 10"
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 3:08\u202fAM",
+        "message": ".ping"
     },
     {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/13/2024 5:35\u202fPM",
-        "message": "The front doors are locked @Garrett Stallsmith"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/13/2024 5:44\u202fPM",
-        "message": "Yes are you still here?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/13/2024 5:46\u202fPM",
-        "message": "@ashtoncorsello you can join"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/13/2024 5:46\u202fPM",
-        "message": "on vc at the moment"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/14/2024 12:41\u202fAM",
-        "message": "I\u2019m not sure what\u2019s going on but it seems the session keeps changing hence the program can\u2019t tell a user is already logged in. If any of you are available, i have a couple of minutes to  investigate it further otherwise I\u2019ll wait till tomorrow"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/14/2024 2:44\u202fAM",
-        "message": "I believe I have it solved now"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/14/2024 2:00\u202fPM",
-        "message": "What\u2019s that url you used to check the access token for auth0 @ashtoncorsello @Garrett Stallsmith  ?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/14/2024 4:48\u202fPM",
-        "message": "I dont think its in the codebase rn"
+        "user_id": "awkward0001",
+        "author": "None",
+        "timestamp": "None",
+        "message": "ping"
     },
     {
         "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/14/2024 5:45\u202fPM",
-        "message": "It used to display on the login page after a successful login"
+        "author": "Gert",
+        "timestamp": "4/21/2024 3:21\u202fAM",
+        "message": "gstallsm@kent.edu"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/14/2024 6:51\u202fPM",
-        "message": "{% if session %}\n    <h1>Welcome {{session.userinfo.name}}!</h1>\n    <p><a href=\"/logout\" id=\"qsLogoutBtn\">Logout</a></p>\n    <div><pre>{{pretty}}</pre></div>\n    {% else %}\n    <h1 id=\"profileDropDown\">Welcome Guest</h1>\n    {% if error %}\n    <h3>{{error}}</h3>\n    {% endif %}"
+        "user_id": "the_king_of_carrot_flowers",
+        "author": "carrot",
+        "timestamp": "4/21/2024 3:21\u202fAM",
+        "message": "dferran2@kent.edu"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/14/2024 6:51\u202fPM",
-        "message": "pretty=json.dumps(session.get(\"user\"), indent=4)"
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 3:21\u202fAM",
+        "message": "https://devpost.com/software/650032/joins/ONansdvLQgY0LPrtUSYx_A"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/14/2024 7:41\u202fPM",
-        "message": "{lab1: [group1lab1, group2lab2], lab2: [group1lab1...]}"
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 3:21\u202fAM",
+        "message": "Tired of grouping with grumpy, unpleasant folk? This bot will help you pick teammates based on personality, temperament, and recent attitudes, providing you with a more enjoyable experience."
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/14/2024 7:42\u202fPM",
-        "message": "labid: [groupid, groupid]\n\nlab1: [group1, group2]"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/14/2024 7:42\u202fPM",
-        "message": "{}"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/14/2024 9:09\u202fPM",
-        "message": "session["
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/14/2024 9:09\u202fPM",
-        "message": "session['user']['userinfo']['email']"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/14/2024 11:17\u202fPM",
+        "user_id": "the_king_of_carrot_flowers",
+        "author": "carrot",
+        "timestamp": "4/21/2024 3:46\u202fAM",
         "message": ""
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/15/2024 1:06\u202fPM",
-        "message": "@Garrett Stallsmith the front end is done for create lab and create group. I\u2019ll need to hop on a call with you today so we can figure out the database part of it"
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 3:56\u202fAM",
+        "message": "https://devpost.com/software/personality-analysis-bot"
     },
     {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/15/2024 1:19\u202fPM",
-        "message": "[Update]: I believe the session issue is resolved cause after login, I created a sample lab (for testing) and it stayed persistent for the most part"
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 4:14\u202fAM",
+        "message": "https://spacy.io/"
     },
     {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/15/2024 1:19\u202fPM",
-        "message": "If you\u2019re going to be on vc for a while I could join at 12:15"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 5:21\u202fAM",
+        "message": "Pong!"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/15/2024 4:31\u202fPM",
-        "message": "https://www.linux-magazine.com/Online/Features/Generating-QR-Codes-in-Linux#:~:text=The%20quickest%20way%20to%20create,%24%20qrencode%20%2Do%20qrcode."
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:18\u202fAM",
+        "message": "Pong!"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/15/2024 7:25\u202fPM",
-        "message": "<img src=\"{{ url_for('static', filename=file_name) }}\">"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:19\u202fAM",
+        "message": "Pong!"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/15/2024 8:15\u202fPM",
-        "message": "highest_qr_id = QRs.select(fn.MAX(fn.CAST(QRs.qr_id, 'INTEGER'))).scalar()"
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 6:21\u202fAM",
+        "message": "ping"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/15/2024 8:15\u202fPM",
-        "message": "from peewee import fn"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:21\u202fAM",
+        "message": "Pong!"
     },
     {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/15/2024 10:02\u202fPM",
-        "message": "@ashtoncorsello I'm not sure is you know but those two icons on the main homepage are tooltips, they just say what labs the user created and ones they're a part of. If you're too busy to use it, you could just leave it."
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:23\u202fAM",
+        "message": "Pong!"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 1:27\u202fAM",
-        "message": "@ashtoncorsello you still on?"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:23\u202fAM",
+        "message": "Pong!"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/16/2024 1:27\u202fAM",
-        "message": "yep"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:24\u202fAM",
+        "message": "complete!"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 1:35\u202fAM",
-        "message": "5 mins going to the it office"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:27\u202fAM",
+        "message": "complete!"
     },
     {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/16/2024 2:59\u202fAM",
-        "message": "How's this?"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:27\u202fAM",
+        "message": "complete!"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 3:00\u202fAM",
-        "message": "submit some codes let's see how it looks"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:30\u202fAM",
+        "message": "complete!"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 3:00\u202fAM",
-        "message": "@omo"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:30\u202fAM",
+        "message": "complete!"
     },
     {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/16/2024 3:01\u202fAM",
-        "message": "on github?"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:32\u202fAM",
+        "message": "complete!"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 3:01\u202fAM",
-        "message": "The changes in your local database wont affect anybody else. So you can just add codes to test how it looks"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:36\u202fAM",
+        "message": "complete!"
     },
     {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/16/2024 4:27\u202fAM",
-        "message": ""
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:39\u202fAM",
+        "message": "complete!"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 4:51\u202fPM",
-        "message": ""
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:46\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 6:07\u202fPM",
-        "message": "error_correction=qrcode.constants.ERROR_CORRECT_M,"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:49\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 9:39\u202fPM",
-        "message": "@ashtoncorsello can you push your ashton-dev branch to main please\n\nThis is for the user guide screen shots so the sooner it's pushed to main the better"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:55\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/16/2024 9:42\u202fPM",
-        "message": "Yep I\u2019ll push it shortly"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:57\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 10:24\u202fPM",
-        "message": "https://www.youtube.com/watch?v=ovUeI8NJ6eQ&ab_channel=QualityControlMusic"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 6:58\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 5:43\u202fPM",
-        "message": "@Terrelle Tettey Can you check my architecture slides? Especially the docker stuff?"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 7:00\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 5:49\u202fPM",
-        "message": "@Garrett Stallsmith i cant speak on any other parts, but id say the biggest reason for using redis is the ability to store much more data in the session than typically allowed. IDC if you have it in the slides or not but when talking about it make sure to mention thats why its being used. We are storing lots of information in the session to increase response time and allow for reloading of the edit page without uploading the scanned image again"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 7:01\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 5:51\u202fPM",
-        "message": "Awesome. I knew it was to store more session data but I\u2019ll hit on the response time as well"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 7:30\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 5:51\u202fPM",
-        "message": "yea its cause we dont need to query the database and wait for a response if we get a lot of the info up front and just store it. Update it when necessary"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 7:31\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 5:55\u202fPM",
-        "message": "Sure! I\u2019ll take a quick look"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 8:41\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 5:57\u202fPM",
-        "message": "OOOOHHHH I see"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 8:41\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 6:05\u202fPM",
-        "message": "Yeah the docker part looks good"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 8:46\u202fAM",
+        "message": "channel.id"
     },
     {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 6:05\u202fPM",
-        "message": "Those are pretty much the containers"
+        "user_id": "awkward0001",
+        "author": "Joseph",
+        "timestamp": "4/21/2024 8:52\u202fAM",
+        "message": "https://discord.com/oauth2/authorize?client_id=1231407726848905267&permissions=826781846656&scope=bot+applications.commands"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/21/2024 2:22\u202fAM",
-        "message": "@Terrelle Tettey here's every message you sent in general"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/21/2024 2:25\u202fAM",
-        "message": "You guys working on a discord tool for the hackathon ?"
+        "user_id": "PABL0#4904",
+        "author": "PABL0",
+        "timestamp": "4/21/2024 9:26\u202fAM",
+        "message": "channel.id"
     },
     {
         "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/21/2024 3:04\u202fAM",
-        "message": "yeah and we need a ton of text to parse"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/21/2024 3:04\u202fAM",
-        "message": "Here's @ashtoncorsello 's logs"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/21/2024 3:10\u202fAM",
-        "message": "Woah that\u2019s actually cool ."
+        "author": "Gert",
+        "timestamp": "4/21/2024 9:58\u202fAM",
+        "message": "hate I hate I hate"
     }
 ]

@@ -4,7 +4,7 @@ import subprocess
 
 def scrape_to_json():
 
-    user_token = input("User token: ")
+    user_token = input("Bot token: ")
     channel_id = input("Channel id: ")
     html_file_name = "scraped_messages.html"
 
@@ -75,4 +75,3 @@ def scrape_to_json():
 
     print("Messages have been parsed and saved to 'parsed_messages.json'")
 
-scrape_to_json()

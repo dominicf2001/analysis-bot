@@ -3,7 +3,7 @@
 import pandas as pd
 import process_messages as pm
 
-read_data = pd.read_csv('sentiment_training_processed.csv')
+read_data = pd.read_csv('sentiment_training.csv')
 write_data = pd.read_csv('sentiment_evalution.csv')
 
 def process_text(read_data):

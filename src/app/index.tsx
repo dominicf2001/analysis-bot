@@ -20,20 +20,19 @@ export const app = createElysia()
           </Layout>
         );
   })
-  .get('dashboard', ctx => {
+  .get('dashboard/:server_id', ctx => {
       return (
           <Layout>
-            <Dashboard user_id="1234"></Dashboard>
+            <Dashboard serverId={ctx.params.server_id}></Dashboard>
           </Layout>
     );
   })
-  .get('users', async ctx => {
-      const users: User[] = db.query("select * from users natural join types_big_five;").all() as User[];
-      console.log(users);
+  .get('dashboard/users/:server_id', async ctx => {
+      const users: User[] = db.query("select * from users natural join servers where server_id = ?").all(ctx.params.server_id) as User[];
       return users;
   })
   .get('user/:user_id', async ctx => {
-      const user: User = db.query("select * from users natural join types_big_five where user_id = ?;").get(ctx.params.user_id) as User;
+      const user: User = db.query("select * from users where user_id = ?").get(ctx.params.user_id) as User;
       return user;
   })
 

@@ -10,9 +10,7 @@ from nltk.stem import WordNetLemmatizer
 import pandas as pd
 import process_messages as pm
 
-read_data = pd.read_csv('sentiment_training_processed.csv')
-#write_data = pd.read_csv('sentiment_evaluation.csv')
-
+import csv
 
 
 nltk.download('punkt')
@@ -32,109 +30,161 @@ def is_url(message):
     except ValueError:
         return False
 
-def concatenate_messages(user_id, messages):
-    concatenated_messages = ""
+def user_messages(user_id, messages):
+    user_messages = []
     for message in messages:
         if message["user_id"] == user_id:
-                concatenated_messages += message["message"] + " "            
-    return concatenated_messages.strip()
+                user_messages.append(message["message"])            
+    return user_messages
 
 
-def tokenize_messages(concatenated_messages):
-    tokens = nltk.word_tokenize(concatenated_messages)
- 
-    return tokens
+def tokenize_messages(user_messages):
+    user_tokenized_messages = []
+    
+    for tokens in user_messages:
+        tokens = nltk.word_tokenize(tokens)
+        user_tokenized_messages.append(tokens)
 
-def remove_stop_words(tokens):
+    return user_tokenized_messages
+
+def remove_stop_words(user_messages):
     # Remove stopwords, punctuation, whitespace, commas, and apostrophes
-    non_stop_words = [word.strip(string.punctuation + string.whitespace).strip("’") for word in tokens if word.lower().strip(string.punctuation + string.whitespace) not in stop_words and word.strip(string.punctuation + string.whitespace) != '']
+    filtered_tokens = []
+    for tokens in user_messages:
+        token_group = []
 
-    filtered_words = []
+        for token in tokens:
+            if "/" not in token and "\\" not in token and "-" not in token and "'" not in token and "http" not in token and "." not in token and not "="  in token and not "_" in token and not "(" in token and  ")" not in token and "{" not in token and "}" not in token and "@" not in token and "’" not in token and "?" not in token and "," not in token and "``" not in token and "<" not in token and ">" not in token and ":" not in token and "&" not in token and "#" not in token:
+                token_group.append(token.lower())
 
-    for word in non_stop_words:
-        if "/" not in word and "\\" not in word and "-" not in word and "'" not in word and "http" not in word and "." not in word and not "="  in word and not "_" in word:
-            filtered_words.append(word.lower())
+        filtered_tokens.append(token_group)
 
-    return filtered_words
+    return filtered_tokens
 
-def lemmatize_words(tokens_with_pos):
-    lemmatized_words = []
-    for token, pos_tag in tokens_with_pos:
-        # Convert the POS tag to a format recognized by the lemmatizer
-        pos_tag = pos_tag[0].lower() if pos_tag[0].lower() in ['a', 'n', 'v'] else 'n'  # Default to noun if not in [a, n, v]
+def lemmatize_words(tagged_token_messages):
+    lemmatized_tokens = []
+    for tokens_with_pos in tagged_token_messages:
+        lemmatized_words = []
 
-        # Lemmatize the token based on its POS tag
-        lemmatized_word = lemmatizer.lemmatize(token, pos=pos_tag)
-        lemmatized_words.append(lemmatized_word)
+        for token, pos_tag in tokens_with_pos:
+            # Convert the POS tag to a format recognized by the lemmatizer
+            pos_tag = pos_tag[0].lower() if pos_tag[0].lower() in ['a', 'n', 'v'] else 'n'  # Default to noun if not in [a, n, v]
+
+            # Lemmatize the token based on its POS tag
+            lemmatized_word = lemmatizer.lemmatize(token, pos=pos_tag)
+            lemmatized_words.append(lemmatized_word)
+
+        lemmatized_tokens.append(lemmatized_words)
 
     return lemmatized_words
 
-def tag_tokens(tokens):
-    tagged_tokens = nltk.pos_tag(tokens)
+def tag_tokens(user_tokenized_messages):
+    tagged_token_messages = []
+    for tokens in user_tokenized_messages:
+        tagged_tokens = []
+        tagged_tokens.append(nltk.pos_tag(tokens))
 
-    return tagged_tokens
+        tagged_token_messages.append(tagged_tokens)
 
-def remove_non_words(tokens):
-    word_tokens = [token for token in tokens if token.strip() and not re.search(r'\d', token)]  # Filter out blank tokens
-    
-    return word_tokens
+    return tagged_token_messages
 
-def remove_nouns(tokens):
+
+def remove_nouns(tagged_token_messages):
     # Define a list to store non-noun tokens
     non_noun_tokens = []
-    
     # Iterate over each token in the list
-    for token in tokens:
+    for tokens in tagged_token_messages:
+        non_nouns = []
         # Check if the second element of the tuple (the tag) starts with 'N' (Nouns start with 'NN', 'NNS', 'NNP', 'NNPS')
-        if not token[1].startswith('NN'):
-            # If it's not a noun, add it to the non_noun_tokens list
-            non_noun_tokens.append(token)
+        for token in tokens:
+            for word in token:
+                if not word[1].startswith('NN'):
+                    # If it's not a noun, add it to the non_noun_tokens list
+                    non_nouns.append(word)
+        non_noun_tokens.append(non_nouns)
     
     return non_noun_tokens
 
 
-def tokens_to_csv(tokens):
-    processed_texts = []
-    for token in tokens:
-        if token:
-            processed_texts.append(' '.join(token))
-    return processed_texts
+def tokens_to_csv(lemmatized_token_messages):
+    non_tag_tokens = []
+    for token in lemmatized_token_messages:
+        token_group = []
+        token_group.append(token[0])
+        non_tag_tokens.append(token_group)
+
+    return non_tag_tokens
+
+def remove_tags(tagged_tokens):
+    non_tagged_tokens = []
+
+    for tokens in tagged_tokens:
+        token_groups = []
+        if tokens != []:
+            for token in tokens:
+                token_groups.append(token[0])
+            non_tagged_tokens.append(token_groups)
+
+    return non_tagged_tokens
+
+def remove_non_words(token_messages):
+    word_tokens = []
+    for tokens in token_messages:
+        token_groups = []
+        for token in tokens:
+            if token.strip() and not re.search(r'\d', token):
+                token_groups.append(token)
+            
+        word_tokens.append(token_groups)
+
+    return word_tokens
+
+
+def tokens_to_csv(token_messages, write_data):
+    with open(write_data, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        
+        writer.writerow(["evaluated_text", "sentiment"])
+
+        for tokens in token_messages:
+            # Concatenate tokens into a single string
+            concatenated_string = ' '.join(tokens)
+            # Write the concatenated string in the first column and leave the second column empty
+            writer.writerow([concatenated_string, None])
+            
+
+def process_user_messages(user_id, sample_data):
+    return remove_non_words(remove_tags(remove_nouns(tag_tokens(remove_stop_words(tokenize_messages(user_messages(user_id, sample_data)))))))
+
+
+def load_json_file():
+    with open("parsed_messages.json", "r") as file:
+        sample_data = json.load(file)
+    return sample_data
+
 
 #####
 
-with open("parsed_messages.json", "r") as file:
-    sample_data = json.load(file)
+load_json_file()
+
+#user_message_array = user_messages(user_id, sample_data)
+#
+#user_tokenized_messages = tokenize_messages(user_message_array)
+#
+#user_tokenized_messages = remove_stop_words(user_tokenized_messages)
+#
+#
+#tagged_token_messages = tag_tokens(user_tokenized_messages)
+#
+#
+#tagged_token_messages = remove_nouns(tagged_token_messages)
+#
+#token_messages = remove_tags(tagged_token_messages)
+#
+#token_messages = remove_non_words(token_messages)
 
 
-user_id = input("\nUser id: ")
-concatenated_messages = concatenate_messages(user_id, sample_data)
-
-print("\nConcatenated Messages for user: ", user_id, "\n")
-
-print(concatenated_messages)
-
-tokenized_messages = tokenize_messages(concatenated_messages)
-
-tokenized_messages = remove_stop_words(tokenized_messages)
+#tokens_to_csv(process_user_messages(user_id, load_json_file()), 'sentiment_evaluation.csv')
 
 
-print("\nStop words removed:\n", tokenized_messages)
-
-tagged_tokens = tag_tokens(tokenized_messages)
-tagged_tokens = remove_nouns(tagged_tokens)
-
-print("\nTagged:\n", tagged_tokens)
-
-
-lemmatized_words = remove_non_words(lemmatize_words(tagged_tokens))
-
-
-print("\nLemmatized words:\n", lemmatized_words)
-
-write_data = pd.DataFrame({
-    'evaluated_text': lemmatized_words,
-    'sentiment': None
-})
-
-write_data.to_csv('sentiment_training.csv', index=False)
 
