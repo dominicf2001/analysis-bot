@@ -81,7 +81,9 @@ def count_evaluations(report_array):
         elif(item == 'negative'):
             negative_count = negative_count + 1
 
-    count_array = [["positive", positive_count], ["neutral", neutral_count], ["negative", negative_count]]
+    total_count = positive_count + neutral_count + negative_count
+
+    count_array = [["positive", positive_count, positive_count/total_count], ["neutral", neutral_count, neutral_count/total_count], ["negative", negative_count/total_count]]
 
     return count_array
 
