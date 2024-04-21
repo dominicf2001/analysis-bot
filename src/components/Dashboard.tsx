@@ -10,8 +10,13 @@ export const Dashboard = (props: DashboardProps & elements.Children) => {
   return (
     (
       <>
-        <script src="public/Dashboard.js"></script>
-        <script type="text/hyperscript"></script>
+        <script src="../../public/Dashboard.js"></script>
+        <script data-server_id={serverId} type="text/hyperscript">
+            on load from window
+            set serverId to my [@data-serverId]
+            fetch `users/${serverId}`
+            then call populateUsersTable(it)
+        </script>
 
         <div>
           <div id="viewButtonContainer" role="group">
@@ -22,24 +27,14 @@ export const Dashboard = (props: DashboardProps & elements.Children) => {
 
         <section>
           <div style="display: none;" id="serverView">
-            <section data-server_id={serverId} _="
-                      on load from window
-                      set serverId to my [@data-serverId]
-                      fetch `users/${serverId}`
-                      then call renderServerGraph(it)">
+            <section>
               <svg id="serverGraph" width="1000" height="600"></svg>
             </section>
           </div>
 
           <div id="usersView" class="grid">
             <section>
-              <table 
-                  data-server_id={props.serverId}
-                  id="userTable" _="
-                    on load from window
-                    set serverId to my [@data-serverId]
-                    fetch `users/${serverId}`
-                    then call populateUsersTable(it)">
+              <table>
                 <thead>
                   <tr>
                     <th scope="col">User</th>
