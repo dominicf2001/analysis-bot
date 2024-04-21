@@ -8,7 +8,7 @@ type LayoutProps = {
 };
 
 export const Layout = (props: LayoutProps & elements.Children) => {
-  const { title = 'analyzer' } = props;
+  const { title = 'PABL0' } = props;
 
   return (
     '<!DOCTYPE html>' +
@@ -36,7 +36,7 @@ export const Layout = (props: LayoutProps & elements.Children) => {
         </head>
         <body>
             <header id="header">
-              <h1 id="headerTitle">Analysis Bot</h1>
+              <h1 id="headerTitle">PABL0</h1>
             </header>
             <main>
               {props.children}

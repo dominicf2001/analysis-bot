@@ -84,3 +84,9 @@ footer {
     display: block;
     margin: auto;
 }
+
+#userGraphSection svg {
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+}

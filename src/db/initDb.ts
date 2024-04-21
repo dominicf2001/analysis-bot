@@ -29,7 +29,9 @@ console.log("Creating tables...");
 // Recreate tables
 db.query(`CREATE TABLE IF NOT EXISTS users (
   user_id TEXT PRIMARY KEY,
-  positivity INTEGER
+  positivity INTEGER,
+  neutral INTEGER,
+  negativity INTEGER
 )`).run();
 
 db.query(`CREATE TABLE IF NOT EXISTS server_users (
@@ -43,6 +45,8 @@ db.query(`CREATE TABLE IF NOT EXISTS server_users (
 db.query(`CREATE TABLE IF NOT EXISTS user_positivity_history (
   user_id TEXT,
   positivity INTEGER,
+  neutral INTEGER,
+  negativity INTEGER,
   timestamp DATE,
   PRIMARY KEY (user_id, timestamp),
   FOREIGN KEY (user_id) REFERENCES users(user_id)
@@ -55,8 +59,8 @@ db.query(`CREATE TABLE IF NOT EXISTS servers (
 
 if (values.f){
     console.log("Inserting test data...");
-    db.query(`INSERT INTO users VALUES ("fred", 50)`).run();
-    db.query(`INSERT INTO users VALUES ("sally", 20)`).run();
+    db.query(`INSERT INTO users VALUES ("fred", 50, 20, 30)`).run();
+    db.query(`INSERT INTO users VALUES ("sally", 20, 20, 20)`).run();
     db.query(`INSERT INTO servers VALUES ("1234", '[]')`).run();
     db.query(`INSERT INTO server_users VALUES ("fred", '1234')`).run();
 }

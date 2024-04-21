@@ -10,8 +10,6 @@ function renderUsersView(){
 
    usersView.style.display = "";
    serverView.style.display = "none";
- 
-
 }
 
 function renderServerView(){
@@ -113,22 +111,36 @@ function renderUserGraph(user) {
     const userGraphSection = document.querySelector("#userGraphSection")
     userGraphSection.setAttribute("aria-busy", "true");
 
-    const data = [];
+    let data = [];
     for (const key in user) {
         if (key !== "user_id") {
+            const value = key == "neutral" ? 
+                user[key] / 2 : 
+                user[key];
+            
             data.push({
                 name: key,
-                value: user[key]
+                value: value
             });
         }
     }
 
-    const svg = d3.select("#userGraph");
-    svg.selectAll("*").remove();
+    if (!user["neutral"] && !user["positivity"] && !user["negativity"]){
+        document.querySelector("#noDataView").style.display = "";
+        document.querySelector("#userGraphSection").style.display = "none";
+    }
+    else {
+        document.querySelector("#noDataView").style.display = "none";
+        document.querySelector("#userGraphSection").style.display = "";
+    }
 
-    const margin = { top: 20, right: 20, bottom: 30, left: 40 },
-          width = +svg.attr("width") - margin.left - margin.right,
-          height = +svg.attr("height") - margin.top - margin.bottom;
+    // Set up the bar chart
+    let svgBar = d3.select("#userGraph");
+    svgBar.selectAll("*").remove();
+
+    let margin = { top: 20, right: 20, bottom: 30, left: 40 },
+        width = +svgBar.attr("width") - margin.left - margin.right,
+        height = +svgBar.attr("height") - margin.top - margin.bottom;
 
     const x = d3.scaleBand()
         .rangeRound([0, width])
@@ -137,17 +149,17 @@ function renderUserGraph(user) {
 
     const y = d3.scaleLinear()
         .rangeRound([height, 0])
-        .domain([0, 100]);
+        .domain([0, d3.max(data, d => d.value)]);
 
-    const g = svg.append("g")
+    const gBar = svgBar.append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    g.append("g")
+    gBar.append("g")
         .attr("class", "axis axis--x")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x));
 
-    g.append("g")
+    gBar.append("g")
         .attr("class", "axis axis--y")
         .call(d3.axisLeft(y))
         .append("text")
@@ -157,7 +169,7 @@ function renderUserGraph(user) {
         .attr("text-anchor", "end")
         .text("Value");
 
-    g.selectAll(".bar")
+    gBar.selectAll(".bar")
         .data(data)
         .enter().append("rect")
         .attr("class", "bar")
@@ -167,5 +179,42 @@ function renderUserGraph(user) {
         .attr("height", d => height - y(d.value))
         .attr("fill", "steelblue");
 
-   userGraphSection.setAttribute("aria-busy", "false");
+    // Set up the pie chart
+    width = 360;
+    height = 360;
+    const radius = Math.min(width, height) / 2;
+    const svgPie = d3.select("#userPie").html("") // Clear previous
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+        .append('g')
+        .attr('transform', `translate(${width / 2}, ${height / 2})`);
+
+    const color = d3.scaleOrdinal()
+        .domain(["positivity", "neutral", "negativity"])
+        .range(["green", "grey", "red"]);
+
+    const pie = d3.pie()
+        .value(d => d.value);
+
+    const path = d3.arc()
+        .outerRadius(radius)
+        .innerRadius(0);
+
+    const arc = svgPie.selectAll('.arc')
+        .data(pie(data))
+        .enter()
+        .append('g')
+        .attr('class', 'arc');
+
+    arc.append('path')
+        .attr('d', path)
+        .attr('fill', d => color(d.data.name));
+
+    arc.append('text')
+        .attr('transform', d => `translate(${path.centroid(d)})`)
+        .attr("text-anchor", "middle")
+        .text(d => d.data.name);
+
+    userGraphSection.setAttribute("aria-busy", "false");
 }

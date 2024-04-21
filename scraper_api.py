@@ -3,7 +3,6 @@ import process_messages as process_messages
 import evaluate_messages as evaluate_messages
 
 
-
 def get_chat_evaluation(user_id, channel_id):
     with open("bot_token.txt", "r") as token_file:
         bot_token = token_file.readline().strip()
@@ -20,6 +19,7 @@ def get_chat_evaluation(user_id, channel_id):
     return final_count
 
 def get_weekly_counts(user_id, channel_id):
+    bot_token = ""
     with open("bot_token.txt", "r") as token_file:
         bot_token = token_file.readline().strip()
 
@@ -31,5 +31,4 @@ def get_weekly_counts(user_id, channel_id):
 
     report = evaluate_messages.evaluate_data()
 
-
-
+    return final_count

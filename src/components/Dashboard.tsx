@@ -45,8 +45,15 @@ export const Dashboard = (props: DashboardProps & elements.Children) => {
               </table>
             </section>
 
+            <div style="display: none;" id="noDataView">
+              <section>
+                <p style="margin: auto; text-align: center;">No data</p>
+              </section>
+            </div>
+
             <section id="userGraphSection">
-              <svg id="userGraph" width="600" height="600"></svg>
+              <svg id="userGraph" width="400" height="400"></svg>
+              <svg id="userPie" width="400" height="400"></svg>
             </section>
         </div>
       </section>

@@ -12,7 +12,7 @@ const db = new Database(env.DB_URL);
 
 export const app = createElysia()
   .use(swagger())
-  .use(html()) 
+  .use(html())
     .get('/', async ctx => {
         return (
           <Layout>
@@ -28,7 +28,7 @@ export const app = createElysia()
     );
   })
   .get('dashboard/users/:server_id', async ctx => {
-      const users: User[] = db.query("select * from users natural join servers where server_id = ?").all(ctx.params.server_id) as User[];
+      const users: User[] = db.query("select user_id, positivity, neutral, negativity from users natural join servers where server_id = ?").all(ctx.params.server_id) as User[];
       return users;
   })
   .get('user/:user_id', async ctx => {
