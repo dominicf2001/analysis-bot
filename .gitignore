@@ -15,5 +15,5 @@ node_modules/
 # Ignore virtual environments
 venv/
 
-# Ignore id
-dc_id.txt
+# Ignore bot token
+bot_token.txt

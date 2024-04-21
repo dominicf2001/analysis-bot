@@ -2,8 +2,8 @@ import scrape_to_json as scrape_to_json
 import process_messages as process_messages
 import evaluate_messages as evaluate_messages
 
-def get_chat_evaluation(user_id):
-    scrape_to_json.scrape_to_json()
+def get_chat_evaluation(user_id, channel_id):
+    scrape_to_json.scrape_to_json("bottoken", channel_id)
 
     json_data = process_messages.load_json_file()
 

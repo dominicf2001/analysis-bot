@@ -2,10 +2,8 @@ from bs4 import BeautifulSoup
 import json
 import subprocess
 
-def scrape_to_json():
+def scrape_to_json(user_token, channel_id):
 
-    user_token = input("Bot token: ")
-    channel_id = input("Channel id: ")
     html_file_name = "scraped_messages.html"
 
     command = "sudo docker run --rm -v analysis-bot/output:/out tyrrrz/discordchatexporter:latest export -t " + user_token + " -c " + channel_id + " -o " + html_file_name
