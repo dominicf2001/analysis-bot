@@ -32,46 +32,46 @@ def scrape_to_json(user_token, channel_id):
     previous_user_id = ""
     # Iterate over message containers
     for container in message_containers:
-
         # Extract data from each container
         author_element = container.find('span', class_='chatlog__author')
         author = author_element.text.strip() if author_element else previous_author
         # Extract user id from each container
         user_id = author_element.get('title').strip() if author_element else previous_user_id
 
+        if(user_id != "PABL0#4904"):
+            # Doubled messages do not have an author
+            previous_author = author_element.text.strip() if author_element else "None"
 
-        # Doubled messages do not have an author
-        previous_author = author_element.text.strip() if author_element else "None"
+            # Doubled messages do not have a user id
+            previous_user_id = author_element.get('title').strip() if author_element else previous_user_id
 
-        # Doubled messages do not have a user id
-        previous_user_id = author_element.get('title').strip() if author_element else previous_user_id
+            timestamp_element = container.find('span', class_='chatlog__timestamp')
+            timestamp = timestamp_element.text.strip() if timestamp_element else previous_timestamp
 
-        timestamp_element = container.find('span', class_='chatlog__timestamp')
-        timestamp = timestamp_element.text.strip() if timestamp_element else previous_timestamp
+            # Doubled messages do not have a timestamp
+            previous_timestamp = timestamp_element.text.strip() if timestamp_element else "None"
 
-        # Doubled messages do not have a timestamp
-        previous_timestamp = timestamp_element.text.strip() if timestamp_element else "None"
-
-        
-        message_element = container.find('span', class_='chatlog__markdown-preserve')
-        message = message_element.text.strip() if message_element else ""
+            
+            message_element = container.find('span', class_='chatlog__markdown-preserve')
+            message = message_element.text.strip() if message_element else ""
 
 
-        avatar_element = container.find('img', class_='chatlog__avatar')
-        avatar = avatar_element.text.strip() if avatar_element else ""
-        print(avatar_element)
-        
-        # Construct message dictionary
-        message_data = {
-            "user_id": user_id,
-            "author": author,
-            "timestamp": timestamp,
-            "message": message,
-            "avatar": avatar
-        }
-        
-        # Append message dictionary to list
-        messages.append(message_data)
+            avatar_element = container.find('img', class_='chatlog__avatar')
+            avatar = avatar_element.text.strip() if avatar_element else ""
+            print(avatar_element)
+            
+            # Construct message dictionary
+            message_data = {
+                "user_id": user_id,
+                "author": author,
+                "timestamp": timestamp,
+                "message": message,
+                "avatar": avatar
+            }
+            
+            # Append message dictionary to list
+            
+            messages.append(message_data)
 
     # Write messages to JSON file
     with open('parsed_messages.json', 'w') as json_file:
