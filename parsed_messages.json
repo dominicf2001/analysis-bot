@@ -1,1262 +1,80 @@
 [
     {
-        "user_id": "",
-        "author": "",
-        "timestamp": "",
-        "message": ""
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "2/28/2024 5:24\u202fPM",
+        "message": "@Terrelle Tettey Josh said to just leave the emails as plain text"
     },
     {
-        "user_id": "",
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "2/28/2024 5:26\u202fPM",
+        "message": ". Do we still use id (int) as a primary key?"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "2/28/2024 5:35\u202fPM",
+        "message": "That's up to us. I'd personally rather use the email string. Probably everything before @kent.edu\n\nIt will just be easier to identify a user throughout a system, and we won't have to worry about generating integer ids"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "2/28/2024 5:35\u202fPM",
+        "message": "The credentials tuple could be something like:\n\nEmail                  | ID     | Password\nabc@kent.edu | abc | hash(password)\n\nThen we use ID to handle access control"
+    },
+    {
+        "user_id": "big_gert",
         "author": "None",
         "timestamp": "None",
-        "message": ""
+        "message": "If you think an integer id adds more utility lmk. I just don't see how it's more useful than just a string"
     },
     {
-        "user_id": "",
-        "author": "None",
-        "timestamp": "None",
-        "message": ""
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/17/2024 4:10\u202fPM",
-        "message": "I asked my boss about what projects we could do and this is what he came back to me with.\n1 Streamline our printing process\nContext: We currently have to manually print posters whenever there is a conference or symposium. Automating this would save a lot of time.\n\n2 Help me build an app to get rid of everybody being an administrator\nContext: Sometimes faculty want to install an app on their own, but are denied because they do not have admin access. We solve this by manually adding them as a local admin. They want it so the user can ask and we can just grant it instead of getting a ticket and having to go somewhere and do something. Automating this would save a lot of time.\n\n3 I would also like more help with QR code solutions in our science labs\nContext: The IT team is currently working on a storage system for lab resources using qr codes. The idea is to use qr codes to create what are essentially maps to keep track of data. For example, if a lab takes fifty samples in fifty individual pipets it would be very useful to tell where and what everything is simply by scanning a slab of samples with your phone.\n\n4 Remotely managing all of the bios settings and security\nContext: We have to do this manually and it is a big time suck\n\n\nPersonally, I think the QR code project would be the most fun. There is also already some time put into the idea so we wouldn't be starting from scratch."
-    },
-    {
-        "user_id": "priyankshah",
-        "author": "PriyankShah",
-        "timestamp": "1/17/2024 10:04\u202fPM",
-        "message": "They\u2019re all great, my favorites are 2 & 3"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "1/17/2024 10:55\u202fPM",
-        "message": "Anything that isn\u2019t 1 I\u2019m okay with"
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "2/28/2024 7:15\u202fPM",
+        "message": "Okay , I think we could work with your suggestion."
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "1/18/2024 1:24\u202fAM",
-        "message": "2 seems very achievable. 3 would be more complicated but more fun"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/18/2024 4:56\u202fPM",
-        "message": "I like 3 as well"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "1/18/2024 8:51\u202fPM",
-        "message": "So we're meeting for today's lab?"
-    },
-    {
-        "user_id": "priyankshah",
-        "author": "PriyankShah",
-        "timestamp": "1/18/2024 10:37\u202fPM",
-        "message": "Hey team so the labs are essentially just group work"
-    },
-    {
-        "user_id": "priyankshah",
-        "author": "PriyankShah",
-        "timestamp": "1/18/2024 10:37\u202fPM",
-        "message": "I asked him if I could remotely join Friday lab during our team discussions he said to ask Doctor Samba first, I will, just wanted to ask first if that is okay with all of you"
-    },
-    {
-        "user_id": "priyankshah",
-        "author": "None",
-        "timestamp": "None",
-        "message": "I guess he said coding should preferably done outside of lab but we have discussions or something regarding the project in lab"
+        "timestamp": "3/6/2024 5:04\u202fPM",
+        "message": "@ashtoncorsello \n\nHe said to prioritize ease of use over security. So we are going to abandon encryption.\n\nThis makes our lives a lot easier"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "1/19/2024 2:05\u202fAM",
-        "message": "It works for me if it works for you"
+        "timestamp": "3/6/2024 5:04\u202fPM",
+        "message": "Now we can handle access control with a lab password, but we the password will only need to be typed once. After a user is let in, we will add an entry to the lab permissions table"
     },
     {
-        "user_id": "priyankshah",
-        "author": "PriyankShah",
-        "timestamp": "1/19/2024 3:46\u202fPM",
-        "message": "What time is the lab today?"
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "3/7/2024 8:36\u202fPM",
+        "message": "Are we all meeting in the office today (during class time) or we should meet go to class and meet after? @Garrett Stallsmith @ashtoncorsello"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/19/2024 3:48\u202fPM",
-        "message": "12:05"
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "3/7/2024 9:34\u202fPM",
+        "message": "MYSQL Installation\nhttps://dev.mysql.com/doc/refman/8.0/en/installing.html"
     },
     {
-        "user_id": "priyankshah",
-        "author": "PriyankShah",
-        "timestamp": "1/19/2024 5:05\u202fPM",
-        "message": "I\u2019ll be in VC"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/19/2024 5:12\u202fPM",
-        "message": "Github:AshtonCorsello"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "1/19/2024 5:13\u202fPM",
-        "message": "Github: AlexBobay"
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "3/8/2024 5:37\u202fPM",
+        "message": "I just pushed the changes with docker set up already. @ashtoncorsello , Garrett and I were discussing using Mysql instead of sqlite as agreed on earlier. We plan to use an ORM (Object relational Mapping) called Peewee which should make the database development process easier.\n\nDocumentation:\nhttp://docs.peeweeorm.com/en/latest/peewee/quickstart.html#model-definition"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "1/19/2024 5:16\u202fPM",
-        "message": "Priyank what's your github?"
-    },
-    {
-        "user_id": "priyankshah",
-        "author": "PriyankShah",
-        "timestamp": "1/19/2024 5:20\u202fPM",
-        "message": "priyankshah2004"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/19/2024 5:20\u202fPM",
-        "message": "yes"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/19/2024 5:20\u202fPM",
-        "message": "gstallsm@kent.edu"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/19/2024 5:24\u202fPM",
-        "message": "https://github.com/MikhailGordeev/QR-Code-Extractor"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "1/19/2024 5:28\u202fPM",
-        "message": "https://docs.google.com/document/d/1QnTG2qJurV2wk3mdsF-FjbOEPj0c__xRwEy-dxzwDq4/edit?usp=sharing"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "1/19/2024 5:28\u202fPM",
-        "message": "https://docs.google.com/spreadsheets/d/1T2Ur7rWLNNSUCxHakF3r3A7-lS6khsAALaXqQ-NjGto/edit?usp=sharing"
-    },
-    {
-        "user_id": "priyankshah",
-        "author": "PriyankShah",
-        "timestamp": "1/19/2024 6:04\u202fPM",
-        "message": "Is the meeting over?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/19/2024 7:25\u202fPM",
-        "message": "Do we all need to submit something for lab 1?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/19/2024 8:42\u202fPM",
-        "message": "@everyone Josh said he can do a lunch meeting on Monday at 12pm. Does this time work for everybody (or at least most people)?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/19/2024 9:14\u202fPM",
-        "message": "Yep that works"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "1/19/2024 11:17\u202fPM",
-        "message": "Works for me"
-    },
-    {
-        "user_id": "priyankshah",
-        "author": "PriyankShah",
-        "timestamp": "1/22/2024 12:04\u202fAM",
-        "message": "Hey guys, sorry for the late message but Dr.Samba emailed me saying he won\u2019t allow for me to work remote, so unfortunately I will no longer be apart of this group. Thank you all for trying to make this work, I do appreciate it!"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/22/2024 2:15\u202fPM",
-        "message": "No worries, thanks for letting us know."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/22/2024 2:15\u202fPM",
-        "message": "Will our meeting today be virtual or in person?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/22/2024 3:45\u202fPM",
-        "message": "If it\u2019s in person, would I be able to join via a video call or voice chat?"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "1/22/2024 4:03\u202fPM",
-        "message": "Also, where would we be having lunch?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/22/2024 4:21\u202fPM",
-        "message": "In person. If you can meet us in Bowman hall room 120"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/22/2024 4:21\u202fPM",
-        "message": "It's more of a meeting at lunch than a lunch meeting lmao"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/22/2024 4:21\u202fPM",
-        "message": "Sorry to hear that. Good luck with your internship and other group!"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/22/2024 4:25\u202fPM",
-        "message": "For sure"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "1/22/2024 4:29\u202fPM",
-        "message": "Could I still bring lunch to the meeting?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/22/2024 4:35\u202fPM",
-        "message": "Totally"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/22/2024 4:57\u202fPM",
-        "message": "If it works for you guys, I can join the voice channel so I can hear and talk"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/22/2024 4:59\u202fPM",
-        "message": "It\u2019s bowman 126 not 120 btw"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/22/2024 5:47\u202fPM",
-        "message": "acorsell@kent.edu"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/22/2024 5:47\u202fPM",
+        "timestamp": "3/8/2024 6:06\u202fPM",
         "message": ""
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "1/23/2024 11:24\u202fPM",
-        "message": "What\u2019s up Terrelle\n\nYou\u2019re part of our group now?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "1/23/2024 11:51\u202fPM",
-        "message": "Yessir!! Joined today and Ashton briefed me on what we intend working on"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/24/2024 1:17\u202fAM",
-        "message": "What's your kent email I'll add you to the ms teams group"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "1/24/2024 1:33\u202fAM",
-        "message": "Sure! ttettey@kent.edu"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/25/2024 1:51\u202fAM",
-        "message": "Is there anything we need to turn in tonight from lab 1?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/25/2024 1:51\u202fAM",
-        "message": "I didn\u2019t see anything but I\u2019m just checking"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "1/25/2024 4:40\u202fPM",
-        "message": "I also didn\u2019t"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "1/25/2024 4:40\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/25/2024 7:46\u202fPM",
-        "message": "I didn\u2019t see a deliverable.\n\nI ended up submitting a text entry basically outlining our group members and project"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/25/2024 7:46\u202fPM",
-        "message": "Who goes there?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "1/25/2024 7:47\u202fPM",
-        "message": "Hiii I\u2019m omo. I switched to Friday lab so you lucky humans got me!"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "1/25/2024 7:47\u202fPM",
-        "message": "Sounds good. We\u2019re going to move to a teams group soon. What\u2019s your kent email so I can add you?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "1/25/2024 7:48\u202fPM",
-        "message": "oajibola@kent.edu"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "1/26/2024 5:15\u202fPM",
-        "message": "@omo @Terrelle Tettey are you coming to lab today?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "1/26/2024 5:26\u202fPM",
-        "message": "Yes"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "1/26/2024 5:26\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/1/2024 6:52\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/1/2024 6:52\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "None",
-        "timestamp": "None",
-        "message": "here are all the lab deliverables so far"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/2/2024 3:40\u202fAM",
-        "message": "I reserved a room in the LL of the student center where we can meet tomorrow @2pm"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/2/2024 6:50\u202fPM",
-        "message": "Since the app is connected to GitHub , here\u2019s how we can make changes to the app and push to GitHub\n\nhttps://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/git-version-control"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/2/2024 7:07\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/2/2024 7:21\u202fPM",
-        "message": "PD1: https://docs.google.com/document/d/1-iUCqBde2I6YaPcr6bWv2TwBhEv1kqxQUOsE9JG5aAU/edit?usp=sharing"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/2/2024 7:21\u202fPM",
-        "message": "This is still a draft, I don't have anything to go on for the last two points (constraints and risks) so if anyone has notes pls share them here."
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/3/2024 7:28\u202fPM",
-        "message": "i added some"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/3/2024 7:55\u202fPM",
-        "message": "did we decide on a project name? i've just been calling it \"The MicroQR Scanner App\""
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/3/2024 9:28\u202fPM",
-        "message": "That\u2019s fine w/ me. Not sure about y\u2019all tho"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/4/2024 3:35\u202fAM",
-        "message": "Sounds good to me.\nDo we put all our names on PD1?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/4/2024 5:30\u202fAM",
-        "message": "It couldn\u2019t hurt"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/4/2024 6:47\u202fPM",
-        "message": "Makes sense."
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/4/2024 6:47\u202fPM",
-        "message": "I'm all done on the PD1 doc, pls read through, add, remove what you feel and ADD YOUR NAMES."
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/4/2024 7:29\u202fPM",
-        "message": "thank you, @omo!"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/4/2024 7:45\u202fPM",
-        "message": "also, the next project manager should get started on the reqs elicitation (it's due on wednesday). pd1 will help with writing it since many of the questions are similar/same if i remember correctly."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/4/2024 9:27\u202fPM",
-        "message": "@chi I\u2019ll get started on that!"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/4/2024 11:22\u202fPM",
-        "message": "I\u2019m making a few minors edits to the doc and then I\u2019ll send a message when I\u2019m all done. Who\u2019s submitting it for the group?"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/4/2024 11:28\u202fPM",
-        "message": "i can do it since i'm PM. @everyone i'm submitting by 10:30 pm"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/5/2024 1:10\u202fAM",
-        "message": "Done editing."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/5/2024 2:43\u202fAM",
-        "message": "can you just send a message when it's submitted? Just wanna make sure haha"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/5/2024 3:29\u202fAM",
-        "message": "just submitted!"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/7/2024 12:35\u202fAM",
-        "message": "Didn\u2019t Samba say there was a second survey due today? I can\u2019t find it on Canvas."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/7/2024 4:17\u202fPM",
-        "message": "So it looks like we have to present our progress next week"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/7/2024 4:17\u202fPM",
-        "message": "It says presentations on 2/13 and 2/15, I was curious if anyone would have an issue with seeing if we could do the 13th as I don\u2019t think I will be in town the 15th"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/7/2024 6:14\u202fPM",
-        "message": "the 13th works for me"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/7/2024 6:17\u202fPM",
-        "message": "What time on the 13th?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/7/2024 7:40\u202fPM",
-        "message": "I think during class!"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/7/2024 10:44\u202fPM",
-        "message": "13th works for me too if my cold hasn\u2019t taken me"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/8/2024 2:22\u202fAM",
-        "message": "Just submitted lab 3"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/9/2024 12:45\u202fPM",
-        "message": "Hey guys Im sorry but I don\u2019t think I\u2019ll be able to make it to the lab today I haven\u2019t gotten any better."
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/9/2024 12:45\u202fPM",
-        "message": "But for any deliverable we have for Tuesday\u2019s presentation, let me know what I have to do."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/9/2024 4:54\u202fPM",
-        "message": "I\u2019m going to be a little late to the lab today"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/9/2024 4:54\u202fPM",
-        "message": "10-15 minutes worst case"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/9/2024 5:23\u202fPM",
-        "message": "lnworie1@kent.edu"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/9/2024 5:24\u202fPM",
-        "message": "get well soon \u2764\ufe0f"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/9/2024 5:26\u202fPM",
-        "message": "@omo could you send me your Kent email so I can invite you to the Google slide presentation"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/9/2024 5:29\u202fPM",
-        "message": "Thank you"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/9/2024 5:29\u202fPM",
-        "message": "Yup it\u2019s oajibola@kent.edu"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/9/2024 5:29\u202fPM",
-        "message": "Thanks"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/9/2024 7:03\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/12/2024 6:30\u202fPM",
-        "message": "@everyone there\u2019s a power apps meeting at 9:30am on Thursday. Let me know if you want in on that and I can invite you to the team\u2019s session"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/12/2024 6:30\u202fPM",
-        "message": "Also there's a session right now if you want in lmk. I know that's kinda short notice"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/12/2024 6:40\u202fPM",
-        "message": "Is the Monday one being recorded? I\u2019m in the middle of a doctors appointment"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/12/2024 6:40\u202fPM",
-        "message": "Actually, will the Thursday one also be recorded?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/12/2024 6:47\u202fPM",
-        "message": "I'll make sure the thursday one is recorded"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/12/2024 7:05\u202fPM",
-        "message": "@everyoneThe Thursday meeting is off. Apologies, I misinterpreted what Josh was saying. We need to figure out a time when the most people can meet. \n\n Josh said whenever the best time for us is, let him know that time and we can schedule a meeting then. We could probably do this during a lab one week."
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/12/2024 7:15\u202fPM",
-        "message": "That works for me"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/12/2024 7:15\u202fPM",
-        "message": "I'm good with setting a meeting during our lab at 1ish"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/12/2024 8:29\u202fPM",
-        "message": "Are we gonna use slides to present? There really isn\u2019t much to share that\u2019s why I\u2019m wondering"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/12/2024 9:38\u202fPM",
-        "message": "we can just explain the images. i just assumed the slides were to just put the pics"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/12/2024 9:39\u202fPM",
-        "message": "When do we present tomorrow?"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/12/2024 9:46\u202fPM",
-        "message": "idk tbh"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/12/2024 9:46\u202fPM",
-        "message": "also what are we submitting for the functional requirements?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/12/2024 10:09\u202fPM",
-        "message": "Fine by me, this Friday works for me too"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/12/2024 10:10\u202fPM",
-        "message": "Nvm it\u2019s set"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/12/2024 10:10\u202fPM",
-        "message": "3:45pm last I checked"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/12/2024 11:00\u202fPM",
-        "message": "Yes I think we\u2019re the first group"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/12/2024 11:41\u202fPM",
-        "message": "We got permission to visit a lab and see a use case for our app. Would anybody be interested in going after the lab friday?"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/13/2024 12:39\u202fAM",
-        "message": "i am"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/13/2024 1:08\u202fAM",
-        "message": "Can someone share the slides that has the stuff we will be presenting?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/13/2024 1:08\u202fAM",
-        "message": "Or should I make some"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/13/2024 2:03\u202fAM",
-        "message": "I created one on Friday; what's your email?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/13/2024 2:37\u202fAM",
-        "message": "is it acorsell@kent.edu @ashtoncorsello ?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/13/2024 2:37\u202fAM",
-        "message": "https://docs.google.com/presentation/d/15gejKXSj3jTte1KcGc7HsBy4K7Mzq7hg2zyjBBKYYC4/edit#slide=id.g268beb58ea0_0_207"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/13/2024 5:20\u202fAM",
-        "message": "Yes!"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/13/2024 2:02\u202fPM",
-        "message": "I invited you already"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/13/2024 6:43\u202fPM",
-        "message": "@everyone if you all want to take a look at the slides and add what you think we should talk about, it would be helpful"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/13/2024 6:43\u202fPM",
-        "message": "And we should all decide on what we will individually talk about"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/13/2024 6:45\u202fPM",
-        "message": "Kk"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/13/2024 6:45\u202fPM",
-        "message": "I can add stuff on the UX and what it might look like all different levels (lab admin, group admin, user)"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/13/2024 6:48\u202fPM",
-        "message": "I could explain the program"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/13/2024 6:52\u202fPM",
-        "message": "I could go over use cases"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/13/2024 6:52\u202fPM",
-        "message": "Ill go over our timeline and what we plan on doing"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/13/2024 6:52\u202fPM",
-        "message": "in the future"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/13/2024 6:59\u202fPM",
-        "message": "Just got the confirmation, we will be visiting the lab at 1pm this Friday"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/13/2024 6:59\u202fPM",
-        "message": "i'll explain ux design for scanner"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/13/2024 7:00\u202fPM",
-        "message": "I\u2019m already explaining the ux but we could do it together?"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/13/2024 7:02\u202fPM",
-        "message": "ohh i just saw my bad"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/13/2024 7:02\u202fPM",
-        "message": "Was there ever a rubric for this presentation or is Samba expecting something thrown together?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/13/2024 7:02\u202fPM",
-        "message": "yea he did not even mention it in class"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/13/2024 7:02\u202fPM",
-        "message": "so no rubric"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/13/2024 7:03\u202fPM",
-        "message": "i think it's p casual.. like just to check on us"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/13/2024 7:03\u202fPM",
-        "message": "all it says is \"Provide detailed report on your group's progress and project timeline. Discuss (a) what you have done, and (b) what you plan to do\""
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/13/2024 7:03\u202fPM",
-        "message": "We'll be fine"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/13/2024 7:05\u202fPM",
-        "message": "can i move the amazon pic to the ux slide to show the inspo for the ux? or was it needed at high level"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/13/2024 7:06\u202fPM",
-        "message": "Why is google slides so much easier to use than powerpoint"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/13/2024 7:06\u202fPM",
-        "message": "It makes no sense"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/13/2024 7:07\u202fPM",
-        "message": "I feel the same way about docs"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/13/2024 7:07\u202fPM",
-        "message": "Google docs too. Word feels so clunky. Maybe it's because docs has always had a good web app"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/13/2024 8:01\u202fPM",
-        "message": "So I was looking into the data sources and remembered that if we were planning on having one to many relationships, then we should use Microsoft Dataverse. This was what prompted me to suggest it"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/13/2024 8:10\u202fPM",
-        "message": "we can look into it on friday, but the customer may prefer sharepoint because they're familiar with that program's functionalities."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/14/2024 4:02\u202fPM",
-        "message": "reminder that we have a lab due tonight"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/14/2024 5:59\u202fPM",
-        "message": "Can we meet up (via discord)  and get this done? Like putting together all that we need?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/14/2024 5:59\u202fPM",
-        "message": "@everyone ?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/14/2024 6:05\u202fPM",
-        "message": "Can we do anytime from 2:30?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/14/2024 6:07\u202fPM",
-        "message": "I can do 2:30 - 3"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/14/2024 6:07\u202fPM",
-        "message": "Or 2-3 and Omo can join in in the middle"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/14/2024 6:34\u202fPM",
-        "message": "Ok- The lab forgot they had a prior engagement at 1pm on Friday. This leaves us with a few options:\n\nFirst, we visit the lab earlier on Friday, around 11:30 and miss the first part of our lab. This shouldn't be an issue since we can say we missed the lab to do capstone stuff anyways.\n\nSecond, We visit the lab around 1pm on Thursday.\n\nPlease let me know what works for the most people so I can communicate with the lab."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/14/2024 6:34\u202fPM",
-        "message": "I'd personally prefer 11:30 on Friday"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/14/2024 6:35\u202fPM",
-        "message": "I\u2019m with early Friday"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/14/2024 6:35\u202fPM",
-        "message": "I\u2019d rather do 11:30, I have class at the Thursday time"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/14/2024 6:39\u202fPM",
-        "message": "I'm dying here. 11:30 apparently won't work"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/14/2024 6:41\u202fPM",
-        "message": "so just Thursday could work?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/14/2024 6:43\u202fPM",
-        "message": "I'm going to talk to the lab people directly and see. I made the mistake of communicating through a middle man so I'm just going directly to the researchers and PI from now on. I'm about to send an email out and see their availability this and next week"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/14/2024 6:44\u202fPM",
-        "message": "Thanks! We appreciate you"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/14/2024 6:45\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/14/2024 6:45\u202fPM",
-        "message": "It's been one step forward two steps backwards"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/14/2024 7:07\u202fPM",
-        "message": "Heaveeeeeeeee!!"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/14/2024 7:36\u202fPM",
-        "message": "gstallsm@kent.edu"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/14/2024 7:36\u202fPM",
-        "message": "abobay@kent.edu"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/14/2024 7:37\u202fPM",
-        "message": "oajibola@kent.edu"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/14/2024 10:29\u202fPM",
-        "message": "Sorry I couldn\u2019t meet exactly at four; does 7 work for anyone?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/14/2024 10:30\u202fPM",
-        "message": "Works for me"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/14/2024 10:52\u202fPM",
-        "message": "That works"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/15/2024 12:05\u202fAM",
-        "message": "Just joined; sorry I was a few minutes late"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/15/2024 12:05\u202fAM",
-        "message": "Context flow diagram https://youtu.be/dFb21Bldf0A?si=ZTOevzjj1nKfAEKq"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/15/2024 12:10\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/15/2024 12:16\u202fAM",
-        "message": "Pls give me a few more minutes I\u2019m picking something up"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/15/2024 12:29\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/15/2024 12:29\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/15/2024 12:47\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/15/2024 1:00\u202fAM",
-        "message": "https://open.spotify.com/track/4C7Ss9bTPOWJMh3rarF1mN?si=e6d39e6a50de4876"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/15/2024 1:19\u202fAM",
-        "message": "@Terrelle Tettey We're almost finished can you take a quick look at it?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/15/2024 3:24\u202fAM",
-        "message": "Sure"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/15/2024 3:24\u202fAM",
-        "message": "Wait it seems I have access to only the one due tomorrow"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/15/2024 3:30\u202fAM",
-        "message": "PD2?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/15/2024 3:30\u202fAM",
-        "message": "You don't mean this one right?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/15/2024 3:37\u202fAM",
-        "message": "Yeah pd2 is what I\u2019m seeing"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/15/2024 3:57\u202fAM",
-        "message": "Oh yeah Garrett would you mind downloading lab 4 and then uploading it here? I removed and added some stuff from lab 4 to make PD2"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/15/2024 3:58\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/15/2024 3:58\u202fAM",
-        "message": "Thanks"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/15/2024 4:03\u202fAM",
-        "message": "Looks good to me"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/15/2024 4:03\u202fAM",
-        "message": "I can go ahead with submitting then"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/15/2024 4:11\u202fAM",
-        "message": "I think Garrett already did but if you made changes you can re-submit"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/15/2024 1:05\u202fPM",
-        "message": "Hey all I\u2019m very sorry I missed the meeting, I unfortunately had plans last night and wasn\u2019t near my computer. If there\u2019s anything at all for pd2 you\u2019d like me to do just let me know!"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/15/2024 3:46\u202fPM",
-        "message": "@everyone i'll update the timeline (gantt chart) for pd2"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/15/2024 3:46\u202fPM",
-        "message": "my apologies for missing the meeting! i've been studying for an exam. 11:30 on friday sounds good to me tho. i have an exam 12:30 to 1:45 today."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/15/2024 10:19\u202fPM",
-        "message": "@everyone as of now we are back on for the lab visit tomorrow. We will go at 1pm"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/15/2024 11:52\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/16/2024 2:18\u202fAM",
-        "message": "PD2 is due by midnight, I added chi's gantt chart as the updated timeline, then added our names and just cleaned up a bit. https://docs.google.com/document/d/12kaLvvO-qREmlkBQaker-0DJ9ZjuR8v_9RkBF9CiJEo/edit?usp=sharing"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/16/2024 3:27\u202fAM",
-        "message": "I\u2019ll submit it by 11pm just in case no one has"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/16/2024 4:21\u202fAM",
-        "message": "sounds good to me. thanks!"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/16/2024 4:28\u202fAM",
-        "message": "Already submitted!"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/16/2024 5:20\u202fPM",
-        "message": "https://docs.google.com/document/d/1uil61Jhxo6FSbKt3_OFi32H7nTh1pKe467oxVbwOsoI/edit?usp=sharing"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/16/2024 5:20\u202fPM",
-        "message": "Lab 5"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/16/2024 7:16\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/16/2024 7:16\u202fPM",
+        "timestamp": "3/8/2024 6:06\u202fPM",
         "message": ""
     },
     {
@@ -1267,2642 +85,614 @@
     },
     {
         "user_id": "big_gert",
-        "author": "None",
-        "timestamp": "None",
-        "message": ""
-    },
-    {
-        "user_id": "big_gert",
-        "author": "None",
-        "timestamp": "None",
-        "message": ""
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/18/2024 4:43\u202fPM",
-        "message": "Any word on if Josh is okay with our plan?"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/19/2024 12:32\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/19/2024 3:59\u202fAM",
-        "message": "context diagram"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/19/2024 3:59\u202fAM",
-        "message": "found a best friend in draw.io @chi"
+        "author": "Garrett Stallsmith",
+        "timestamp": "3/8/2024 6:24\u202fPM",
+        "message": "Here's the rewritten schema with improved clarity on the relationships between data:\n\nCREATE TABLE Users (\n    user_id TEXT PRIMARY KEY,\n    email TEXT UNIQUE NOT NULL\n);\n\nCREATE TABLE Groups (\n    group_id INTEGER PRIMARY KEY,\n    lab_id INTEGER NOT NULL,\n    group_name TEXT NOT NULL,\n    FOREIGN KEY (lab_id) REFERENCES Labs(lab_id)\n);\n\nCREATE TABLE LabPermissions (\n    user_id TEXT NOT NULL,\n    lab_id INTEGER NOT NULL,\n    lab_admin INTEGER NOT NULL,\n    FOREIGN KEY (user_id) REFERENCES Users(user_id),\n    FOREIGN KEY (lab_id) REFERENCES Labs(lab_id),\n    PRIMARY KEY (user_id, lab_id)\n);\n\nCREATE TABLE Labs (\n    lab_id INTEGER PRIMARY KEY,\n    lab_name TEXT NOT NULL UNIQUE\n);\n\nHere are the changes made:\n\n1. Renamed table \"Credentials\" to \"Users\" for clarity.\n2. Renamed table \"Lab-Permissions\" to \"LabPermissions\" for consistency and readability.\n3. Changed the data type of \"lab_id\" in \"LabPermissions\" to INTEGER to match the type in \"Groups\" and \"Labs\" tables for consistency.\n4. Added foreign key constraints to enforce referential integrity between tables.\n5. Made \"user_id\" and \"lab_id\" in \"LabPermissions\" table a composite primary key to ensure each combination is unique.\n6. Removed redundant PRIMARY KEY declaration in the \"Groups\" table since it's a composite key with \"group_id\" as PRIMARY KEY.\n7. Adjusted the table creation order to ensure foreign key constraints are properly referenced."
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "2/19/2024 5:53\u202fPM",
-        "message": "Not yet I\u2019ll keep you posted"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/19/2024 11:47\u202fPM",
-        "message": "https://docs.google.com/document/d/1BJy1ueCmOnmeBSs1r5Pwy2qQILwQ6ly7ceHM9NEXgD4/edit?usp=sharing"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/19/2024 11:47\u202fPM",
-        "message": "PD3"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/20/2024 5:37\u202fPM",
-        "message": "@everyone we have all of the maps/charts for pd3 and lab #5 due tmrw except for the  hardware and software architecture. have we decided the software/hardware that we want to use for our project?"
+        "timestamp": "3/8/2024 6:46\u202fPM",
+        "message": "from peewee import *\n\nDefine your database connectiondatabase = SqliteDatabase('yourdatabasename.db')\n\nDefine your modelsclass BaseModel(Model):\n    class Meta:\n        database = database\n\nclass Users(BaseModel):\n    user_id = CharField(primary_key=True)\n    email = CharField(unique=True)\n\nclass Groups(BaseModel):\n    group_id = AutoField(primary_key=True)\n    lab_id = IntegerField()\n    group_name = CharField()\n    \n    class Meta:\n        indexes = (\n            (('lab_id', 'group_name'), True),\n        )\n\nclass LabPermissions(BaseModel):\n    user_id = ForeignKeyField(Users)\n    lab_id = ForeignKeyField(Groups)\n    lab_admin = BooleanField()\n\n    class Meta:\n        primary_key = CompositeKey('user_id', 'lab_id')\n\nclass Labs(BaseModel):\n    lab_id = AutoField(primary_key=True)\n    lab_name = CharField(unique=True)\n\nCreate tables if they do not existdef create_tables():\n    with database:\n        database.create_tables([Users, Groups, LabPermissions, Labs])\n\nDrop tables if they existdef drop_tables():\n    with database:\n        database.drop_tables([Users, Groups, LabPermissions, Labs])\n\nExample of usageif __name == 'main':\n    # Create tables\n    create_tables()"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "2/20/2024 8:39\u202fPM",
-        "message": "s everyone going to class today?"
+        "timestamp": "3/12/2024 12:39\u202fAM",
+        "message": "Just thought I'd put this here for reference\n\nDocker Notes\nSetup on Windows\nhttps://docs.docker.com/docker-for-windows/install\n\nMac\nhttps://docs.docker.com/docker-for-mac/install\n\nType these 2 commands to check if the installation is complete\ndocker version\n\ndocker compose version\n\nIf all is good, do:\ndocker run hello-world\n\nIf it\u2019s successful, then you\u2019re all set with the setup.\n\n\n\nFOR OUR PROJECT:\ndocker build -t microqr_image .\ndocker run --name microqr -e TESTING=true -p \"8080:5000\" -d microqr_image\nthe above command should make it run on localhost:8080"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "2/20/2024 8:39\u202fPM",
-        "message": "I was thinking we could discuss it then.  I was contemplating on whether to skip so we can get things up to speed or go and then still meetup afterwards"
+        "timestamp": "3/12/2024 7:16\u202fPM",
+        "message": "@Garrett Stallsmith @ashtoncorsello we still meeting during class time at smith?"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "2/20/2024 11:20\u202fPM",
-        "message": "We're meeting with Josh on Friday at 2pm"
+        "timestamp": "3/12/2024 7:28\u202fPM",
+        "message": "Yes but ill be a little late. If you come at 4 I\u2019ll be in smith"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "2/20/2024 11:33\u202fPM",
-        "message": "@chi it seems we are still going with powerapps (for the pd3) until we let Josh know our new plan"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/20/2024 11:33\u202fPM",
-        "message": "Then in our later reports we can base everything on python"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/21/2024 2:15\u202fAM",
-        "message": "okay"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/21/2024 2:15\u202fAM",
-        "message": "we still need software and hardware architecture tho"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/21/2024 2:20\u202fAM",
-        "message": "i'll be busy after 2pm but if someone could brief me after that'd be great"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/21/2024 4:02\u202fAM",
-        "message": "The context diagram and its narrative are now on lab 5 and PD3, we need to split the software/hardware component, system architecture diagrams so we can get everything done on time"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/21/2024 6:19\u202fPM",
-        "message": "Does anyone have time after 3 . I could hop a call to help put the two architectures together"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "2/21/2024 6:32\u202fPM",
-        "message": "I am not available after 3"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/21/2024 6:34\u202fPM",
-        "message": "i won't be either :/"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/21/2024 6:34\u202fPM",
-        "message": "but i'll update the gantt chart and add the user diagrams to pd3"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/21/2024 7:01\u202fPM",
-        "message": "@chi"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/21/2024 7:10\u202fPM",
-        "message": "@chi I feel regardless of what we plan to implement soon, the doc is meant to be an overview of all we plan to create ultimately"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/21/2024 7:10\u202fPM",
-        "message": "So even if we\u2019re not touching on the create QR yet we still need to explain it on the deliverables"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/21/2024 9:09\u202fPM",
-        "message": "If anyone didn\u2019t do the message and sequence charts, here\u2019s what I have so far"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/21/2024 9:09\u202fPM",
-        "message": "Researcher inviting user to lab group\n\nResearcher editing in lab group\n\nAnd researcher creating one from scratch"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "None",
-        "timestamp": "None",
-        "message": "I guess I\u2019m wondering if we want to create the lab group after we insert the data for the QR codes?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "None",
-        "timestamp": "None",
-        "message": "It makes sense for me that way but lmk what y\u2019all think"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/21/2024 9:56\u202fPM",
-        "message": "I can take a look in a little! I can also submit tonight unless someone else was planning on doing it or wants to. I\u2019m sorry I\u2019ve been a bit busy today but will be able to take a good look at everything around 7:45-8"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/21/2024 10:32\u202fPM",
-        "message": "So from what I understand, the attributes for data entry are specific to each lab group (as a guideline I think) so if we insert after it might do that"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/22/2024 12:28\u202fAM",
-        "message": "@Terrelle Tettey I'm putting your use cases on the doc rn, I was wondering if you had the narrative for them, it could be a draft it really doesn't matter"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/22/2024 12:59\u202fAM",
-        "message": "those are message sequence diagrams btw, not use case diagrams"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/22/2024 1:01\u202fAM",
-        "message": "Don't they also describe each use case?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/22/2024 1:13\u202fAM",
-        "message": "Yeah the sequence diagrams are based on use cases"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/22/2024 1:21\u202fAM",
-        "message": "yh thats what i thought"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/22/2024 1:21\u202fAM",
-        "message": "I've added hardware, software component diagrams"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "None",
-        "timestamp": "None",
-        "message": "Is anyone working on the system architecture or should we skip that?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/22/2024 1:33\u202fAM",
-        "message": "What time do you plan on submitting it ?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/22/2024 1:34\u202fAM",
-        "message": "I was thinking 10pm?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/22/2024 2:06\u202fAM",
-        "message": "you guys killed it with the charts/diagrams. It looks awesome, and provides us with a really good framework for how it looks like the software should be structured. I like the idea of each individual function like scanning, authentication, invites, etc. being their own \"node\" and handling things separately from each other."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/22/2024 2:06\u202fAM",
-        "message": "Also, the different roles (researcher, supervisor, etc) should be easy enough to implement if we go the route of a web app since we'll be able to keep their roles in session cookies and only allow certain roles to preform the tasks we want them to"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/22/2024 2:57\u202fAM",
-        "message": "If everyone is done editing, I'll submit both docs in 3 min"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/22/2024 2:57\u202fAM",
-        "message": "almost done"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/22/2024 2:57\u202fAM",
-        "message": "Do you want me to add an updated timeline at the bottom?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/22/2024 2:57\u202fAM",
-        "message": "oh right sorry i forgot you were adding the gantt chart"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/22/2024 2:58\u202fAM",
-        "message": "yes pls if you have one"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/22/2024 2:59\u202fAM",
-        "message": "wait is someone doing the gantt chart? That is what I was going to add a screenshot of at the bottom"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/22/2024 3:03\u202fAM",
-        "message": "yes that's what chi is on"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/22/2024 3:04\u202fAM",
-        "message": "anyone can update it tho"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/22/2024 3:04\u202fAM",
-        "message": "@ashtoncorsello go ahead and and it dw"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/22/2024 3:18\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/22/2024 3:18\u202fAM",
-        "message": "I made it probably way more confusing than I meant to but the different colors within one bar just means that that persons work should be done and they can help with the larger tasks"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/22/2024 3:21\u202fAM",
-        "message": "we can work out the kinks later"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/22/2024 3:21\u202fAM",
-        "message": "i'm done w my updates"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/22/2024 3:21\u202fAM",
-        "message": "I added it to the lab and pd3"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/22/2024 3:21\u202fAM",
-        "message": "As am I"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/22/2024 3:23\u202fAM",
-        "message": "alright, thank you! submitting now"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/22/2024 3:24\u202fAM",
-        "message": "Thank you so much!!"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/22/2024 3:27\u202fAM",
-        "message": "kk thank u"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/22/2024 3:27\u202fAM",
-        "message": "here are the diagrams i added for future reference"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/22/2024 3:31\u202fAM",
-        "message": "Submitted \u2705"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/23/2024 12:24\u202fAM",
-        "message": "About the assignment due on Sunday, do we email the stakeholders\u2019 evaluation to Josh or print it out, have him fill it and then upload it?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/23/2024 12:24\u202fAM",
-        "message": "Also, who are we naming team leader 2? I\u2019m about to submit my survey just to get ahead"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/23/2024 2:03\u202fAM",
-        "message": "@everyone"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/23/2024 2:18\u202fAM",
-        "message": "Sorry, wasnt checking discord. It doesn't matter to me who we name. Honestly you did a lot if you want it to be you thats fine, but I know we haven't really been doing the team leader thing as expected lol"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/23/2024 2:18\u202fAM",
-        "message": "As for Josh I believe we are meeting with him tomorrow so we can give it to him then, and he can send it to us when hes done"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "Lastly, I did some work on the existing codebase. If you want to try it out, you can clone my branch \"Ashton\" on the github. Below are the steps to get the results images from a picture of QR codes. \n\n1. Clone Repo"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "2. (Create virtual environment if not in one) python3 -m venv virtualenv"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "3. (Enter virtual environment if just created)  source virtualenv/bin/activate"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "4.pip install -r requirements.txt"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "5. cd Scanner"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "6. python MicroQRCodeScanner.py --image images/{whatever image you are inputting}"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "7. The results, among some other json files that will be useful later, will be in the output folder titled \"{imageName}.svg\". You can open it via a live server or localhost as it may not show in vscode."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "The code looks rough right now and I will be cleaning it up, but so far the process is automated enough that you do not need to do anything other than input the image, which will put us in a good spot when we are uploading images from the webapp."
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/23/2024 2:27\u202fAM",
-        "message": "Okay I\u2019ll use my name for the sake of submitting the survey but I know others have also done a lot these past weeks."
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/23/2024 2:27\u202fAM",
-        "message": "Ok sounds good"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/23/2024 5:19\u202fPM",
-        "message": "https://docs.google.com/document/d/1YKgkNp0aIjI1C0HOeKgFXTDAHYIbktaFu0TjWY4ZoAY/edit?usp=sharing"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/23/2024 5:19\u202fPM",
-        "message": "google doc for pd4"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/23/2024 5:20\u202fPM",
-        "message": "sounds good, thanks ashton!"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/23/2024 5:34\u202fPM",
-        "message": "https://drive.google.com/file/d/1UkJQOQ_Bby73RBdDj9IhJN4aPcZ1D2is/view?usp=drive_link"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/23/2024 5:34\u202fPM",
-        "message": "^ we can use draw.io to make diagrams on a shared doc and collaborate. i made one for the software systems architecture."
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/23/2024 9:00\u202fPM",
-        "message": "almost through with setting flask with bootstrap. will let you know when it's done"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/23/2024 10:08\u202fPM",
-        "message": "should be done"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/24/2024 12:25\u202fAM",
-        "message": "I am not merging anything just yet but I do have uploads working, so you can now upload a qr code and the json files are created. Images are not being generated just yet but it is a start"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/25/2024 1:06\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/25/2024 3:49\u202fPM",
-        "message": "Looks good to me, honest too"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/26/2024 12:45\u202fAM",
-        "message": "@ashtoncorsello just checking if you\u2019ve submitted the evaluation"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/26/2024 1:14\u202fAM",
-        "message": "Just did"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/26/2024 1:37\u202fAM",
-        "message": "Thanks!"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/27/2024 5:13\u202fPM",
-        "message": "Are you guys going to the combined class today"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/27/2024 5:16\u202fPM",
-        "message": "I plan on"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/27/2024 5:24\u202fPM",
-        "message": "Yeah"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/27/2024 8:49\u202fPM",
-        "message": "I\u2019m in the class now. Any of you coming?"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/27/2024 8:54\u202fPM",
-        "message": "@everyone"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "2/27/2024 8:54\u202fPM",
-        "message": "Yall coming? It's just me and Terrelle rn"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/27/2024 9:14\u202fPM",
-        "message": "Sorry I\u2019m missing something do we all need to present something?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "2/27/2024 9:24\u202fPM",
-        "message": "We were just working on the project"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/27/2024 9:24\u202fPM",
-        "message": "Oh okay I don\u2019t think I\u2019ll make it"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/27/2024 9:24\u202fPM",
-        "message": "^ to class"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/28/2024 7:44\u202fPM",
-        "message": "@everyone i updated the gantt chart for lab #6. i think is is all we need for it if i'm not mistaken? i'll submit if everyone is cool w it"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/28/2024 7:48\u202fPM",
-        "message": "Yeah sounds good. We can get on PD4 then"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/28/2024 7:48\u202fPM",
-        "message": "We only need to add a few narratives and apparently a workflow diagram"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/28/2024 7:52\u202fPM",
-        "message": "what's the workflow of?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/28/2024 7:53\u202fPM",
-        "message": "Our security solutions"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/29/2024 12:19\u202fAM",
-        "message": "I can do that tonight"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/29/2024 12:19\u202fAM",
-        "message": "The security solution"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/29/2024 12:36\u202fAM",
-        "message": "Thanks that\u2019d be great"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/29/2024 12:36\u202fAM",
-        "message": "I\u2019ll try to do the narratives"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/29/2024 2:15\u202fAM",
-        "message": "@chi what did you use to draw the use cases, I need to make one more for QR code editing"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/29/2024 2:46\u202fAM",
-        "message": "i used draw.io"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/29/2024 2:46\u202fAM",
-        "message": "that same software"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/29/2024 2:46\u202fAM",
-        "message": "oh right thanks"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/29/2024 2:46\u202fAM",
-        "message": "@omo you can copy this one and just edit the words if that helps"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "2/29/2024 2:46\u202fAM",
-        "message": "and i submitted lab #6 btw"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/29/2024 2:49\u202fAM",
-        "message": "oh yh this helps!"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/29/2024 3:18\u202fAM",
-        "message": "I am in the middle of making the diagram but I needed something to go off so I just created the login page that is using Auth0 and only lets you login with google and only permits signing in with @kent.edu email"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/29/2024 3:18\u202fAM",
-        "message": "so thats done"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/29/2024 3:26\u202fAM",
-        "message": "sounds good"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/29/2024 3:26\u202fAM",
-        "message": "wait do you mean as a diagram or is it something you tested out?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/29/2024 3:28\u202fAM",
-        "message": "i just built it"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/29/2024 3:28\u202fAM",
-        "message": "its working. It uses googles login which pretty much prevents attacks because youd have to attack google to get our access token that gets returned on a successful login"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": ""
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "thats the data we are getting per user for a successful login"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/29/2024 3:33\u202fAM",
-        "message": "oh okay that makes sense"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/29/2024 3:33\u202fAM",
-        "message": "I think we have everything now, we just need the workflow @chi are you okay to submit PD4 as well?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/29/2024 4:15\u202fAM",
-        "message": "Ok i am done with security portion"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/29/2024 4:15\u202fAM",
-        "message": "I can submit, and will at 11:30 if no one has anything else to add"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "Also, did someone submit lab6 or do we need to?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "2/29/2024 4:34\u202fAM",
-        "message": "PD4 submitted"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "2/29/2024 4:41\u202fAM",
-        "message": "@ashtoncorsello Thanks. Chi submitted lab 6 earlier"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/1/2024 5:10\u202fPM",
-        "message": "I\u2019m running a few minutes late"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "3/1/2024 6:33\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/2/2024 8:05\u202fPM",
-        "message": "@everyone ,did anyone experience this?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/2/2024 8:05\u202fPM",
-        "message": "Is this app.py?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/3/2024 12:14\u202fAM",
-        "message": "I would like to think so. I was just running the project (using \"flask run\",  but when I clicked \"Login\", it took me here."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/3/2024 2:48\u202fAM",
-        "message": "I did"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/3/2024 3:30\u202fAM",
-        "message": "I just ran it, it just takes me to the home page when I click login"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/3/2024 3:30\u202fAM",
-        "message": "you mentioned a flask run, I just used python app.py, am i doing something entirely different?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/3/2024 3:59\u202fAM",
-        "message": "I\u2019ll have to try that"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "3/3/2024 4:57\u202fPM",
-        "message": "Are you using localhost:3000 or 127.0.01:3000?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "3/3/2024 4:57\u202fPM",
-        "message": "You gotta use localhost"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/3/2024 5:58\u202fPM",
-        "message": "So I used the url flask provides when I enter the flask run command."
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/3/2024 8:12\u202fPM",
-        "message": "@ashtoncorsello  do you have a couple of minutes to show me how you run the project on your end?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "3/4/2024 12:47\u202fAM",
-        "message": "Sorry I wasn\u2019t available today but I will have time tomorrow @Terrelle Tettey or anyone else who needs help setting it up. If you run it, it\u2019s gonna give some different urls to use but none of them are correct you gotta just type in \u201clocalhost:3000\u201d in the address bar"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/4/2024 1:27\u202fAM",
-        "message": "Oh okay. I have the docker container setup so I\u2019ll see if it takes this into account"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/4/2024 9:54\u202fPM",
-        "message": "@Garrett Stallsmith @ashtoncorsello we still meeting @5??"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/4/2024 9:55\u202fPM",
-        "message": "Tomorrow"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/4/2024 10:03\u202fPM",
-        "message": "Haha my bad"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/5/2024 8:23\u202fPM",
-        "message": "@Garrett Stallsmith @ashtoncorsello y\u2019all going to class or want to meet up at smith to code?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/5/2024 8:30\u202fPM",
-        "message": "@ashtoncorsello Terrelle and I are skipping class to work on the project we're in smith hall 122"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/5/2024 8:30\u202fPM",
-        "message": "Anybody who wants to come can come for that matter"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "3/5/2024 8:32\u202fPM",
-        "message": "@Garrett Stallsmith I\u2019ll just let you guys know that we started working on frameworks for each of the individual pages, we\u2019ll finish it up on Friday"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/6/2024 2:06\u202fAM",
-        "message": "https://docs.google.com/document/d/12MTv2ODx4Kaesg4exG8qz_QsMvwI1sGhBXa_nm4s_BE/edit?usp=sharing"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "3/6/2024 7:12\u202fPM",
-        "message": "do we need anything else for lab #7? i was gonna update the timeline as well"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/6/2024 7:43\u202fPM",
-        "message": "Yeah I think that\u2019s all we need (+ the timeline) thanks"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/6/2024 7:43\u202fPM",
-        "message": "@chi"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "3/7/2024 3:29\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "3/7/2024 3:29\u202fAM",
-        "message": "@omo updated"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/7/2024 4:50\u202fAM",
-        "message": "thank you! submitted lab 7."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "3/8/2024 4:40\u202fPM",
-        "message": "I will be a little late to lab but I will be there."
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/8/2024 4:58\u202fPM",
-        "message": "Same here @everyone"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/13/2024 1:16\u202fAM",
-        "message": "hi @ashtoncorsello , did we install python or python 3 when setting up app.py? I have to do it again because I changed from windows. python just returns \"command not found\" so i made python 3 an alias of python and now it returns: File \"/home/omo776/MiQR/MiQRo-1/app.py\", line 139\n    >>>>>>> 88d3d457c3d22452799a9248c461f29a8f8370c3"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/13/2024 1:16\u202fAM",
-        "message": "I'd appreciate all the help i can get from anyone actually, thanks"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "None",
-        "timestamp": "None",
-        "message": "@everyone"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/13/2024 2:55\u202fAM",
-        "message": "It'd be easier to explain in person. We do need to get everybody on the same page."
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/13/2024 3:03\u202fAM",
-        "message": "Okiesssss"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/13/2024 3:03\u202fAM",
-        "message": "Friday then"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "3/13/2024 7:19\u202fPM",
-        "message": "updated gantt chart for lab #8"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/14/2024 1:41\u202fAM",
-        "message": "thank you! I added it to lab 7, highlighted the change  and submitted it as lab 8 @everyone"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/14/2024 1:41\u202fAM",
-        "message": "in case no one had"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "3/14/2024 1:28\u202fPM",
-        "message": "@everyone it looks like we have a group progress report today"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "3/14/2024 1:28\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "It says not to waste time on fancy powerpoints, it doesn't matter to me if we make one or not.  I can talk about security, login/authentication stuff."
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/14/2024 2:02\u202fPM",
-        "message": "I could cover what the web app currently does (scanning ) and future front-end goals"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/14/2024 2:02\u202fPM",
-        "message": "I\u2019ll talk about docker setup"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "3/14/2024 4:25\u202fPM",
-        "message": "I could talk about bootstrap"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/14/2024 4:58\u202fPM",
-        "message": "I can talk about future goals short term and long term"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "3/14/2024 5:07\u202fPM",
-        "message": "do we need slides again?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/14/2024 5:09\u202fPM",
-        "message": "We could make a shabby one"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/14/2024 5:09\u202fPM",
-        "message": "https://docs.google.com/presentation/d/1ZJYQEPjFPlDJrU_7OVQK29CKoopaHoMXEhSu6jfXD9M/edit?usp=sharing"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "3/14/2024 6:01\u202fPM",
-        "message": "kk"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "3/14/2024 6:01\u202fPM",
-        "message": "i'll explain data flow/sorting from the front end"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "3/14/2024 6:46\u202fPM",
-        "message": "fyi i'll probably leave right after we present. i have a meeting for another group project at 4pm"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/14/2024 6:51\u202fPM",
-        "message": "Okiees"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/14/2024 11:39\u202fPM",
-        "message": "@Terrelle Tettey everything worked but i had to do this: sudo snap install docker and had to use sudo for the rest of the docker commands"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/14/2024 11:39\u202fPM",
-        "message": "also when you try to upload an image on the web app do you get an internal server error?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/14/2024 11:43\u202fPM",
-        "message": "No! I\u2019ll have to check to see if I have the same issue"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/14/2024 11:48\u202fPM",
-        "message": "very good just come get my laptop"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/14/2024 11:48\u202fPM",
-        "message": "i don't think its me though"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/15/2024 6:47\u202fPM",
-        "message": "@everyone I\u2019m so sorry I missed the lab. I had a calc exam this morning and I think it scrambled my brain because I honestly came in at 2:05 thinking class was just about to start."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/15/2024 6:49\u202fPM",
-        "message": "You didn't miss much. We just got everybody on the same page as far as docker and our tech stack"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/15/2024 7:04\u202fPM",
-        "message": "Yep seems so thanks"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "3/19/2024 3:23\u202fPM",
-        "message": "Who is team leader for team lead report #3 today?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "3/19/2024 3:23\u202fPM",
-        "message": "Also, I can upload our group progress reports unless someone already did"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "3/19/2024 4:40\u202fPM",
-        "message": "We can do me this time"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "3/20/2024 6:49\u202fPM",
-        "message": "i started a doc for lab #9 https://docs.google.com/document/d/1wmqGtys-pn3hfNDjJTda3DGbiKMZowZeXFKLPSEEvxo/edit?usp=sharing"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "3/22/2024 1:35\u202fAM",
-        "message": "@everyone hi everyone, thought i should let you know i won\u2019t be at the lab tomorrow as I\u2019m still away at nsbe."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "3/22/2024 2:47\u202fPM",
-        "message": "I am also traveling home today so unfortunately won\u2019t be at lab either:("
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/22/2024 3:49\u202fPM",
-        "message": "I\u2019m going to be late to lab today"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "3/22/2024 4:12\u202fPM",
-        "message": "submitted lab #9 btw"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "3/22/2024 4:15\u202fPM",
-        "message": "I\u2019m running a couple minutes late as well; will be there shortly"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "3/22/2024 4:37\u202fPM",
-        "message": "@chi the office is Smith 121"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/2/2024 7:58\u202fPM",
-        "message": "Dry runs are starting come Thursday and will last until next Thursday. He wants to know when we're going by Wednesday."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/2/2024 8:00\u202fPM",
-        "message": "What do you mean by dry runs?"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/2/2024 8:02\u202fPM",
-        "message": "I don't know, it just says \"dry runs\""
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/3/2024 8:35\u202fPM",
-        "message": "Did any of you even go to the workshop before spring break?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/3/2024 9:03\u202fPM",
-        "message": "Are you asking because of the survey @OurGoodSir ?"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/3/2024 9:06\u202fPM",
-        "message": "Yeah"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/3/2024 9:29\u202fPM",
-        "message": "I thought it was voluntary? It shows 0 pts"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/4/2024 12:13\u202fAM",
-        "message": "You\u2019re right, I guess I don\u2019t need to"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/4/2024 9:33\u202fPM",
-        "message": "@everyone Since it's crunch time, we should meet before lab tomorrow to get everybody on the same page. Maybe 11am if that works for everybody?\n\nWe only have 14 days until we have to present the project so we definitely need to get an action plan ready and execute it."
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/5/2024 2:18\u202fPM",
-        "message": "Where we meeting?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/5/2024 2:31\u202fPM",
-        "message": "Can we use the same class"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/5/2024 2:31\u202fPM",
-        "message": "If it\u2019s not busy"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/5/2024 2:35\u202fPM",
-        "message": "Okay or we could meet on the first floor lobby"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/5/2024 2:55\u202fPM",
-        "message": "I\u2019m sorry I\u2019m going to be a little late"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/5/2024 2:59\u202fPM",
-        "message": "People are in the lab so we can meet in the lounge area"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/5/2024 3:48\u202fPM",
-        "message": "me too, but i\u2019ll be at lab"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/5/2024 5:08\u202fPM",
-        "message": "@everyone since there's no classes on monday, how does everyone feel about meeting on this monday (4/8) from 1pm - 3pm? we can quickly crunch out some work before the eclipse starts."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/5/2024 10:12\u202fPM",
-        "message": "@everyone did we submit lab 10? If not I can do it tonight"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/5/2024 10:12\u202fPM",
-        "message": "I didn\u2019t notice it was due yesterday that\u2019s on me"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/6/2024 8:11\u202fPM",
-        "message": "we\u2019ll meet in the computer lab!"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/6/2024 8:12\u202fPM",
-        "message": "not sure, but i know i didn\u2019t since i submitted #9"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/7/2024 9:27\u202fPM",
-        "message": "I can submit our source code tonight. It says upload via SVN? Is that accurate and if so what SVN is it? Also what are we doing for our user/technical guide?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/7/2024 10:00\u202fPM",
-        "message": "In class he said we can just submit the git repo"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/7/2024 10:15\u202fPM",
-        "message": ""
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/7/2024 10:15\u202fPM",
-        "message": "For the technical report: We could fill this out without going in depth since it\u2019s still a draft"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/7/2024 10:21\u202fPM",
-        "message": "okay :)"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/7/2024 11:00\u202fPM",
-        "message": "I've made a doc, we have enough time before its due @everyone https://docs.google.com/document/d/1C3Pvgx7d9ERF8xuQ23Bi8u3jPHcFCwSKS67CbZzoQ0s/edit?usp=sharing"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/7/2024 11:24\u202fPM",
-        "message": "it seems like a culmination of the labs/deliverables, I've added what i can but some of them we haven't covered yet. Its possible no one sees this on time but I'll turn it in at 10pm."
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/8/2024 1:16\u202fAM",
-        "message": "I'll take a look at it"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 1:38\u202fAM",
+        "timestamp": "3/12/2024 7:43\u202fPM",
         "message": "Okay"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/8/2024 1:38\u202fAM",
-        "message": "I am also working on it right now, and I submitted our github repo"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 1:49\u202fAM",
-        "message": "Great thanks!"
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "3/12/2024 10:47\u202fPM",
+        "message": "DOCKER COMMANDS\nWith the new changes, when you clone the repo, starting the application will be way easier:\n\nDo\ndocker compose up -d // this runs our project\ndocker compose down // for when we want to stop it\ndocker compose build // for rebuilding when changes are made to our app\n\nand @Garrett Stallsmith , here's the video on Peewee \n\nhttps://youtu.be/CsYRcjsCV34?si=BxAJ-AxblhAf2cvt"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/8/2024 1:58\u202fAM",
-        "message": "I am done editing with my parts. I removed the parts that mentioned pictures of front end stuff because I don't have images of that, but if someone does please add it!"
+        "timestamp": "3/13/2024 12:35\u202fAM",
+        "message": "Hey guys, sorry I didn\u2019t make it today. Had some stuff going on. I\u2019ll be able to meet after class on Thursday for a little bit and then I don\u2019t have anything going on Friday so I can stay as long as needed."
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/8/2024 2:03\u202fAM",
-        "message": "Do you guys want more conclusion?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 2:07\u202fAM",
-        "message": "It looks fine, we can always add to it if we need to."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/8/2024 2:36\u202fAM",
-        "message": "lmk if it gets submitted or ill do it at 11"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 2:40\u202fAM",
-        "message": "@Garrett Stallsmith are you done editing?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/8/2024 2:46\u202fAM",
-        "message": "Yeah we can add more later"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 2:50\u202fAM",
-        "message": "Okay"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 2:50\u202fAM",
-        "message": "Just submitted it."
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 6:53\u202fAM",
-        "message": "@Terrelle Tettey have you solved your internal server error problem for image upload?"
+        "timestamp": "3/13/2024 3:43\u202fPM",
+        "message": "@Terrelle Tettey @ashtoncorsello I have some free time between 4-5:15 today if you guys wanted to stop to work on the project"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "4/8/2024 12:21\u202fPM",
-        "message": "@omo, I believe @ashtoncorsello already solved that. I\u2019m working on unittesting and getting the site live"
+        "timestamp": "3/13/2024 7:59\u202fPM",
+        "message": "Sure! I could make some time."
     },
     {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 1:30\u202fPM",
-        "message": "Okay thanks. @ashtoncorsello pls let me know what you did"
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "3/14/2024 12:35\u202fAM",
+        "message": "We should merge the database branch with main"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "3/14/2024 12:35\u202fAM",
+        "message": "Probably after we put the tables in"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "3/14/2024 6:41\u202fPM",
+        "message": "https://www.youtube.com/watch?v=rIrNIzy6U_g&ab_channel=Fireship"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "3/15/2024 5:46\u202fPM",
+        "message": "Authlib==1.3.0\nblinker==1.7.0\ncertifi==2024.2.2\ncffi==1.16.0\ncharset-normalizer==3.3.2\nclick==8.1.7\ncolorama==0.4.6\ncontourpy==1.2.0\ncryptography==42.0.5\ncycler==0.12.1\nFlask==3.0.2\nfonttools==4.49.0\nidna==3.6\nimportlib-metadata==7.0.1\nimportlib_resources==6.1.2\nitsdangerous==2.1.2\nJinja2==3.1.3\nkiwisolver==1.4.5\nMarkupSafe==2.1.5\nmatplotlib==3.8.3\nnumpy==1.26.4\nopencv-python==4.9.0.80\npackaging==23.2\npeewee==3.17.1\npillow==10.2.0\npycparser==2.21\nPyMySQL==1.1.0\npyparsing==3.1.1\npython-dateutil==2.9.0.post0\npython-dotenv==1.0.1\nrequests==2.31.0\nsix==1.16.0\nsvgwrite==1.4.3\nurllib3==2.2.1\nWerkzeug==3.0.1\nzipp==3.17.0"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "4/8/2024 3:22\u202fPM",
-        "message": "What time are we meeting?"
+        "timestamp": "3/16/2024 9:44\u202fPM",
+        "message": "It seems I\u2019m still having MySQL improperly configured issue so maybe @Garrett Stallsmith is it possible to use one of your machines at work this Tuesday (if I still don\u2019t have it resolved)"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/8/2024 3:24\u202fPM",
-        "message": "I'm fine to meet whenever"
+        "timestamp": "3/16/2024 10:26\u202fPM",
+        "message": "You got it"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "4/8/2024 3:27\u202fPM",
-        "message": "For those showing up, does 1pm work?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/8/2024 3:27\u202fPM",
-        "message": "Where?"
+        "timestamp": "3/16/2024 10:32\u202fPM",
+        "message": "Awesome"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "4/8/2024 3:29\u202fPM",
-        "message": "@omo suggested MSB when we spoke last Friday"
+        "timestamp": "3/19/2024 7:54\u202fPM",
+        "message": "Are y\u2019all in the office atm @Garrett Stallsmith @ashtoncorsello"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/8/2024 3:31\u202fPM",
-        "message": "That works for me"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/8/2024 4:18\u202fPM",
-        "message": "My office is also open"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 4:46\u202fPM",
-        "message": "Where\u2019s your office? @Garrett Stallsmith"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 4:46\u202fPM",
-        "message": "Oh wait is where we met Josh?"
+        "timestamp": "3/19/2024 7:54\u202fPM",
+        "message": "I'm in here, Ashton isn't"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "4/8/2024 4:49\u202fPM",
-        "message": "His office is in smith"
+        "timestamp": "3/26/2024 10:48\u202fPM",
+        "message": "@Garrett Stallsmith @ashtoncorsello does anyone want to meet via discord this evening? If not , what time(s) do you suggest?"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/2/2024 7:47\u202fPM",
+        "message": "@Garrett Stallsmith is your office open?"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/8/2024 5:01\u202fPM",
-        "message": "Smith 121"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/8/2024 5:01\u202fPM",
-        "message": "It\u2019s a nice space to work but msb is fine as well"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 5:04\u202fPM",
-        "message": "Thanks yh we can do smith"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 9:03\u202fPM",
-        "message": "Are you guys back at smith @Terrelle Tettey @Garrett Stallsmith"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/8/2024 9:04\u202fPM",
+        "timestamp": "4/2/2024 7:48\u202fPM",
         "message": "Yes"
     },
     {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 9:06\u202fPM",
-        "message": "Thanks"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 11:41\u202fPM",
-        "message": "who would like to be team leader 4 so we can complete the survey @everyone"
+        "user_id": "ashtoncorsello",
+        "author": "ashtoncorsello",
+        "timestamp": "4/2/2024 8:20\u202fPM",
+        "message": "@Garrett Stallsmith @Terrelle Tettey will you guys be at the office after class?"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "4/8/2024 11:46\u202fPM",
-        "message": "I could"
+        "timestamp": "4/2/2024 8:23\u202fPM",
+        "message": "Yes"
     },
     {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/8/2024 11:56\u202fPM",
-        "message": "Okiess"
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/4/2024 10:43\u202fPM",
+        "message": "@Terrelle Tettey"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "4/9/2024 7:50\u202fPM",
-        "message": "@everyone, if anyone is in class, could you let us know if there\u2019s anything important being discussed"
+        "timestamp": "4/4/2024 11:06\u202fPM",
+        "message": "Sure! We can go with CentOS."
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/5/2024 1:36\u202fAM",
+        "message": "That\u2019s the beauty of docker right. He could have said anything it would be fine"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/5/2024 1:36\u202fAM",
+        "message": "I guess it matters for testing"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/5/2024 2:12\u202fAM",
+        "message": "Yeah I personally went with CentOS because I\u2019ve worked with that and didn\u2019t want any unforeseen issues with compatibility"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/9/2024 8:00\u202fPM",
-        "message": ""
+        "timestamp": "4/5/2024 8:25\u202fPM",
+        "message": "I now understand the beauty of docker"
+    },
+    {
+        "user_id": "omo2880",
+        "author": "omo",
+        "timestamp": "4/7/2024 12:43\u202fAM",
+        "message": "Not sure if you\u2019ve covered this yet but where can I find the data attributes to be displayed for both fetching and creating qrs ?"
+    },
+    {
+        "user_id": "ashtoncorsello",
+        "author": "ashtoncorsello",
+        "timestamp": "4/7/2024 12:57\u202fAM",
+        "message": "Creating has not been implemented yet, but fetching them will be in the app.py, there\u2019s a variable called value = do_stuff() and that value is a dictionary that is {1:qrdata, 2:qrdata\u2026} and is in order from top left to bottom right"
+    },
+    {
+        "user_id": "omo2880",
+        "author": "omo",
+        "timestamp": "4/7/2024 12:58\u202fAM",
+        "message": "Got it thanks"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/9/2024 10:46\u202fPM",
+        "message": "Finally been able to setup a gui for viewing db @Garrett Stallsmith"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/9/2024 11:01\u202fPM",
+        "message": "I\u2019ll push the changes to apiEndpoints then after restart the container and anyone should be able to login with \n\nHostname: localhost\nUsername: root\nPassword: myrootpassword \nPort:  3306\n\nwith an sql viewer extension"
+    },
+    {
+        "user_id": "ashtoncorsello",
+        "author": "ashtoncorsello",
+        "timestamp": "4/10/2024 12:42\u202fAM",
+        "message": "tomorrow in the branch \"Ashton\", I will push all my changes. It will be a pretty big push, so if someone want's to hop on a call we can go through merging together so nothing gets messed up"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/10/2024 1:12\u202fAM",
+        "message": "You have to show me how"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/10/2024 1:13\u202fAM",
+        "message": "I\u2019ll be in the IT office from 11-5 if you wanted to do it in person"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/10/2024 2:59\u202fAM",
+        "message": "I can stop by at 3 tomorrow to continue working on the project and show you then"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/10/2024 2:59\u202fAM",
+        "message": "If that works"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/10/2024 5:01\u202fPM",
+        "message": "I can't do 3 anymore, something came up with IT. How does 4 sound instead?"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/10/2024 5:40\u202fPM",
+        "message": "Sure! We can create a remote meeting"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/10/2024 7:55\u202fPM",
+        "message": "I can\u2019t meet right now. I\u2019m too busy with work"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
         "timestamp": "4/10/2024 7:58\u202fPM",
-        "message": "@everyone if anyone is free and would like to catch up on the project, I\u2019m meeting virtually with @Garrett Stallsmith at 4 on discord so you can join the meeting"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/11/2024 10:24\u202fPM",
-        "message": "Does anyone know if the user guide is included with the technical report?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/11/2024 10:24\u202fPM",
-        "message": "Because I can\u2019t find a guide for it but maybe I\u2019m not looking in the right place"
+        "message": "Does 4 work? @ashtoncorsello"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/12/2024 9:55\u202fPM",
-        "message": "what are the principles of computer science theory from the HW?"
+        "timestamp": "4/10/2024 10:18\u202fPM",
+        "message": "Alright so I got a lot of things working on my end. Right now, when you upload an image it returns the image and on each image there is a number (1-n). There is a dictionary printed next to it with the ID number that corresponds with the QR data. This dictionary is stored in \u201cids\u201d in the homepage function in app.py. Also, there is now the ability to click on each individual qr code and you can receive the information attached to it. It is currently simply taking you to a missing webpage that is called \u201cid\u201d.html. Once we decide how we want to handle that I will make the function. My code is in Ashton-Dev branch. I\u2019m currently working on testing the combining of my code with the current main branch, will update once it\u2019s ready. I\u2019m building the docker image, it\u2019s taking a really long time so be prepared for that when it\u2019s time to build. Lastly, I\u2019m utilizing Chrome because the clicking on the QR codes isn\u2019t working well in safari"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/12/2024 9:55\u202fPM",
-        "message": "is there specific ones hes talking about?"
+        "timestamp": "4/11/2024 1:23\u202fAM",
+        "message": "It\u2019s all working now. If you clone my branch and build the docker image there should be no problems!"
     },
     {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/12/2024 10:11\u202fPM",
-        "message": "I found that they aren\u2019t the same everywhere, I googled them and just chose the most relevant ones to our project. I\u2019m not sure if he gave specific ones in class @ashtoncorsello"
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/13/2024 12:36\u202fAM",
+        "message": "@Terrelle Tettey What say you to meeting at the IT office at 1pm tomorrow?"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "4/13/2024 5:47\u202fPM",
-        "message": "@everyone we are on vc rn"
+        "timestamp": "4/13/2024 2:02\u202fAM",
+        "message": "That works"
+    },
+    {
+        "user_id": "ashtoncorsello",
+        "author": "ashtoncorsello",
+        "timestamp": "4/13/2024 3:25\u202fPM",
+        "message": "can i join a discord call with u guys around then?"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/13/2024 3:50\u202fPM",
+        "message": "Fine with me"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/13/2024 5:48\u202fPM",
-        "message": "We can hear you but you can't hear us @ashtoncorsello"
+        "timestamp": "4/13/2024 4:28\u202fPM",
+        "message": "More like 1;30"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/13/2024 8:22\u202fPM",
-        "message": "document.getElementbyId('the qr id').style = 'border-radius 20px'"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/13/2024 8:59\u202fPM",
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/13/2024 4:49\u202fPM",
         "message": ""
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/13/2024 9:23\u202fPM",
-        "message": "cat database.py"
+        "timestamp": "4/13/2024 5:18\u202fPM",
+        "message": "@Terrelle Tettey I\u2019m getting starbucks do you want anything?"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/13/2024 5:27\u202fPM",
+        "message": "I\u2019m good; preciate it tho . I should be there in 10"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/13/2024 5:35\u202fPM",
+        "message": "The front doors are locked @Garrett Stallsmith"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/13/2024 9:23\u202fPM",
-        "message": "docker compose down && docker compose up -d"
+        "timestamp": "4/13/2024 5:44\u202fPM",
+        "message": "Yes are you still here?"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/13/2024 5:46\u202fPM",
+        "message": "@ashtoncorsello you can join"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/13/2024 5:46\u202fPM",
+        "message": "on vc at the moment"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/14/2024 12:41\u202fAM",
+        "message": "I\u2019m not sure what\u2019s going on but it seems the session keeps changing hence the program can\u2019t tell a user is already logged in. If any of you are available, i have a couple of minutes to  investigate it further otherwise I\u2019ll wait till tomorrow"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/14/2024 2:44\u202fAM",
+        "message": "I believe I have it solved now"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/14/2024 2:00\u202fPM",
+        "message": "What\u2019s that url you used to check the access token for auth0 @ashtoncorsello @Garrett Stallsmith  ?"
+    },
+    {
+        "user_id": "ashtoncorsello",
+        "author": "ashtoncorsello",
+        "timestamp": "4/14/2024 4:48\u202fPM",
+        "message": "I dont think its in the codebase rn"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/13/2024 10:01\u202fPM",
-        "message": "<body>\n            <h1>Lab Information</h1>\n            <ul>\n                {% if not labs_info %}\n                <pre> No Labs --- ADD CREATE LAB BUTTON </pre>\n                {% endif %}\n                {% for lab in labs_info %}\n                    <li>\n                        <h2>{{ lab.lab_name }}</h2>\n                        <p>{{ lab.lab_id }}</p>\n                    </li>\n                {% endfor %}\n            </ul>\n        </body>"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/13/2024 11:10\u202fPM",
-        "message": "The homepage, fetch and create files are now in the templates folder"
+        "timestamp": "4/14/2024 5:45\u202fPM",
+        "message": "It used to display on the login page after a successful login"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/14/2024 4:53\u202fPM",
-        "message": "@everyone ill be in the voice chat for a while if anyone wants to join and continue working"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/14/2024 6:24\u202fPM",
-        "message": "@ashtoncorsello can you hear me?"
+        "timestamp": "4/14/2024 6:51\u202fPM",
+        "message": "{% if session %}\n    <h1>Welcome {{session.userinfo.name}}!</h1>\n    <p><a href=\"/logout\" id=\"qsLogoutBtn\">Logout</a></p>\n    <div><pre>{{pretty}}</pre></div>\n    {% else %}\n    <h1 id=\"profileDropDown\">Welcome Guest</h1>\n    {% if error %}\n    <h3>{{error}}</h3>\n    {% endif %}"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/14/2024 6:24\u202fPM",
-        "message": "I cannot"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/14/2024 6:24\u202fPM",
-        "message": "Okay"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/14/2024 6:32\u202fPM",
-        "message": "I had to restart my laptop and I'm having the sound problem again"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/15/2024 12:50\u202fPM",
-        "message": "Was the final technical report due yesterday or is it due on the 16th? @everyone"
+        "timestamp": "4/14/2024 6:51\u202fPM",
+        "message": "pretty=json.dumps(session.get(\"user\"), indent=4)"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/15/2024 1:04\u202fPM",
-        "message": "I could have sworn he said it was all changing to the 16th but I\u2019m honestly not 100% sure"
+        "timestamp": "4/14/2024 7:41\u202fPM",
+        "message": "{lab1: [group1lab1, group2lab2], lab2: [group1lab1...]}"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/14/2024 7:42\u202fPM",
+        "message": "labid: [groupid, groupid]\n\nlab1: [group1, group2]"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/14/2024 7:42\u202fPM",
+        "message": "{}"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/15/2024 1:04\u202fPM",
-        "message": "We\u2019re gonna work on finishing the site today. If anyone who isn\u2019t actively working on a portion of the code could work on the technical report and user guide it was be greatly appreciated"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "Ill be in the voice chat starting at like 11 for a while"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/15/2024 1:10\u202fPM",
-        "message": "About the user guide, does anyone know if there\u2019s a template? If not can we assume it\u2019s included in the technical report (use cases and all )"
+        "timestamp": "4/14/2024 9:09\u202fPM",
+        "message": "session["
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/15/2024 1:13\u202fPM",
-        "message": "There\u2019s no template but I think it will be a separate section within the technical report"
+        "timestamp": "4/14/2024 9:09\u202fPM",
+        "message": "session['user']['userinfo']['email']"
     },
     {
-        "user_id": "omo2880",
-        "author": "omo",
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/14/2024 11:17\u202fPM",
+        "message": ""
+    },
+    {
+        "user_id": "ashtoncorsello",
+        "author": "ashtoncorsello",
+        "timestamp": "4/15/2024 1:06\u202fPM",
+        "message": "@Garrett Stallsmith the front end is done for create lab and create group. I\u2019ll need to hop on a call with you today so we can figure out the database part of it"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
         "timestamp": "4/15/2024 1:19\u202fPM",
-        "message": "Okay I\u2019ll write a few paragraphs explaining what does what and the use of the web app for the user guide"
+        "message": "[Update]: I believe the session issue is resolved cause after login, I created a sample lab (for testing) and it stayed persistent for the most part"
     },
     {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/15/2024 1:21\u202fPM",
-        "message": "if you make a google docs @OurGoodSir and i can help"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/15/2024 1:21\u202fPM",
-        "message": "@everyone i'm gonna be out of town for the majority of this week, is everyone cool with me asking Dr. Samba to move our presentation to next week? lmk if not, i'll email him by this evening"
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/15/2024 1:19\u202fPM",
+        "message": "If you\u2019re going to be on vc for a while I could join at 12:15"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/15/2024 1:27\u202fPM",
-        "message": "All of the dry runs are this week, so I don\u2019t think we\u2019ll be able to be moved to next week for that. But it sounds like you\u2019ll be good for the final presentation!"
+        "timestamp": "4/15/2024 4:31\u202fPM",
+        "message": "https://www.linux-magazine.com/Online/Features/Generating-QR-Codes-in-Linux#:~:text=The%20quickest%20way%20to%20create,%24%20qrencode%20%2Do%20qrcode."
     },
     {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/15/2024 1:29\u202fPM",
-        "message": "hm okay.. bc i did see something on canvas about rescheduling if need be but if i can't that's fine."
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/15/2024 7:25\u202fPM",
+        "message": "<img src=\"{{ url_for('static', filename=file_name) }}\">"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/15/2024 1:30\u202fPM",
-        "message": "Oh ok! I didn\u2019t see that but if that\u2019s the case I have no worries with it!!"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/15/2024 3:35\u202fPM",
-        "message": "Technical Report: https://docs.google.com/document/d/1C3Pvgx7d9ERF8xuQ23Bi8u3jPHcFCwSKS67CbZzoQ0s/edit?usp=sharing"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/15/2024 3:35\u202fPM",
-        "message": "User Guide: https://docs.google.com/document/d/1SSOzH8m8XrYlciN3XgV7H7q6nUkkTNcnKrW9geIdOao/edit?usp=sharing"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/15/2024 4:01\u202fPM",
-        "message": "User guide template"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/15/2024 4:01\u202fPM",
-        "message": "\u201cThe User Guide describes the operations, Administration and Maintenance of the System\u201d"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/15/2024 11:47\u202fPM",
-        "message": "For the user guide, I need something on this: routine maintenance tasks, troubleshooting common issues, and ensuring the stability and security of the system over time (by the lab admin or members) @chi @OurGoodSir"
+        "timestamp": "4/15/2024 8:15\u202fPM",
+        "message": "highest_qr_id = QRs.select(fn.MAX(fn.CAST(QRs.qr_id, 'INTEGER'))).scalar()"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/16/2024 2:43\u202fAM",
-        "message": "we are gonna need some slides for tomorrows presentation. We can probably make them tomorrow but im just letting everyone know"
+        "timestamp": "4/15/2024 8:15\u202fPM",
+        "message": "from peewee import fn"
     },
     {
         "user_id": "omo2880",
         "author": "omo",
-        "timestamp": "4/16/2024 3:03\u202fAM",
-        "message": "Aren't we going on thursday, the 18th?"
+        "timestamp": "4/15/2024 10:02\u202fPM",
+        "message": "@ashtoncorsello I'm not sure is you know but those two icons on the main homepage are tooltips, they just say what labs the user created and ones they're a part of. If you're too busy to use it, you could just leave it."
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 3:07\u202fAM",
-        "message": "python3 -m venv name_of_venv"
+        "timestamp": "4/16/2024 1:27\u202fAM",
+        "message": "@ashtoncorsello you still on?"
+    },
+    {
+        "user_id": "ashtoncorsello",
+        "author": "ashtoncorsello",
+        "timestamp": "4/16/2024 1:27\u202fAM",
+        "message": "yep"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 3:07\u202fAM",
-        "message": "name_of_venv = qrvenv"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "None",
-        "timestamp": "None",
-        "message": "python3venv/\n.env\nqrenv/\nqrvenv/\nwinvenv/\nqrvenv/\nmacvenv/"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "None",
-        "timestamp": "None",
-        "message": "docker compose build -d"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "None",
-        "timestamp": "None",
-        "message": "git branch"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "None",
-        "timestamp": "None",
-        "message": "git pull origin Ashton-Dev"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "None",
-        "timestamp": "None",
-        "message": "git stash"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "None",
-        "timestamp": "None",
-        "message": "docker compose build"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/16/2024 6:54\u202fAM",
-        "message": "that\u2019s what i thought too"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/16/2024 6:55\u202fAM",
-        "message": "i\u2019ll look at the docs asap"
+        "timestamp": "4/16/2024 1:35\u202fAM",
+        "message": "5 mins going to the it office"
     },
     {
         "user_id": "omo2880",
         "author": "omo",
-        "timestamp": "4/16/2024 12:56\u202fPM",
-        "message": "@ashtoncorsello could you pls give me that microqr image command again? I installed docker desktop on ubuntu"
+        "timestamp": "4/16/2024 2:59\u202fAM",
+        "message": "How's this?"
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/16/2024 2:45\u202fPM",
-        "message": "docker build -t microqr_image ."
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/16/2024 3:00\u202fAM",
+        "message": "submit some codes let's see how it looks"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/16/2024 3:00\u202fAM",
+        "message": "@omo"
     },
     {
         "user_id": "omo2880",
         "author": "omo",
-        "timestamp": "4/16/2024 4:39\u202fPM",
-        "message": "Thanks also I made a few more spacing changes, put the line numbers there"
+        "timestamp": "4/16/2024 3:01\u202fAM",
+        "message": "on github?"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 5:54\u202fPM",
-        "message": "New technical report: https://docs.google.com/document/d/1dyhk31XYs6PYbz7084s98LNAZ0udJkobnScObR_8T6Q/edit?usp=sharing"
+        "timestamp": "4/16/2024 3:01\u202fAM",
+        "message": "The changes in your local database wont affect anybody else. So you can just add codes to test how it looks"
     },
     {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/16/2024 5:54\u202fPM",
-        "message": "I'm basically copying from the other report into the nicer format and adding stuff as needed"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/17/2024 12:04\u202fAM",
-        "message": "i sent a request to edit"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/17/2024 12:04\u202fAM",
-        "message": "Five mins"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/17/2024 12:12\u202fAM",
-        "message": "The technical report is mostly done, feel free to add whatever though. The user guide needs more work"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/17/2024 12:12\u202fAM",
-        "message": "Actually, do we have one already?"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/17/2024 12:13\u202fAM",
-        "message": "yea ik i was working on the report earlier. i'm adding to the user guide doc now and matching the format to the one that you're using"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/17/2024 12:13\u202fAM",
-        "message": "here's the user guide link again: https://docs.google.com/document/d/1ABPeBYVTJaU6zT91B_i5jPfiF2zpGRd8-lAGUg582pQ/edit?usp=sharing"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/17/2024 12:31\u202fAM",
-        "message": "^ new link"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 12:55\u202fAM",
-        "message": "@chi sorry im moving you down lol"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:08\u202fAM",
+        "user_id": "omo2880",
+        "author": "omo",
+        "timestamp": "4/16/2024 4:27\u202fAM",
         "message": ""
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:08\u202fAM",
-        "message": "labs page example"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/16/2024 4:51\u202fPM",
         "message": ""
     },
     {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "Lab info example Lab Members is anyone who used that invite code to join the lab"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "Lab admins have the ability to remove them"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": ""
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "qr code generation and download. Users input how many they want, and the size of the and click submit. Then they can download them"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": ""
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "Lab joining page"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "User inputs invite code given to them by lab admin, has access to all groups and QRs within lab. Joined user can add and delete groups, but cannot delete the lab"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "They can leave the lab. Only the lab admin can delete a lab and see the invite code."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:24\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:24\u202fAM",
-        "message": "This is the define QR data, or Edit. This is what is used to edit, and can only be used after the Add QR data is performed"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 1:27\u202fAM",
-        "message": "This all looks great! would you mind adding the code I committed to your branch ,this page looks a bit out of line, to the left unlike the rest of the pages."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:28\u202fAM",
-        "message": "where did you push to?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:28\u202fAM",
-        "message": "what branch"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 1:33\u202fAM",
-        "message": "Ashton-Dev"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 1:33\u202fAM",
-        "message": "templates"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:34\u202fAM",
-        "message": "hmm, I already merged from that branch..."
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 1:35\u202fAM",
-        "message": "This morning?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:35\u202fAM",
-        "message": "about an hour ago"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:35\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "When you click on the actual qr code in the image, if data for it exists it scrolls into view and is highlighted. If it doesnt, that is when you are prompted to add qr data"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 1:37\u202fAM",
-        "message": "Can you still make changes?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:37\u202fAM",
-        "message": "sure"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 1:38\u202fAM",
-        "message": "Okay I\u2019ll push to the Ashton-Dev branch"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:38\u202fAM",
-        "message": "I think the last thing for the user guide the login. The login is simply a button that says login, and they are then prompted to login with google. A kent email address must be used, but other than logging in with google there is nothing needed on their part"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 1:44\u202fAM",
-        "message": "done"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 1:51\u202fAM",
-        "message": "@omo can you pull the changes from main and edit that one? I only ask because our qr_generate.html files are significantly different and if I merge yours it will revert to not working fully"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 1:52\u202fAM",
-        "message": "Okay"
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/16/2024 6:07\u202fPM",
+        "message": "error_correction=qrcode.constants.ERROR_CORRECT_M,"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/17/2024 1:59\u202fAM",
-        "message": "@ashtoncorsello that restart took forever"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 2:15\u202fAM",
-        "message": "done, generate and login (just the button)"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/17/2024 2:19\u202fAM",
-        "message": "done w user guide"
-    },
-    {
-        "user_id": "cbabe005",
-        "author": "chi",
-        "timestamp": "4/17/2024 2:19\u202fAM",
-        "message": "feel free to edit tho"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/17/2024 2:21\u202fAM",
-        "message": "I'll start on the presentation slides"
+        "timestamp": "4/16/2024 9:39\u202fPM",
+        "message": "@ashtoncorsello can you push your ashton-dev branch to main please\n\nThis is for the user guide screen shots so the sooner it's pushed to main the better"
     },
     {
         "user_id": "ashtoncorsello",
         "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 2:34\u202fAM",
-        "message": "I'll be submitted the technical report and user guide at 1pm tomorrow. Please make any edits/changes before then."
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/17/2024 3:17\u202fAM",
-        "message": "https://docs.google.com/presentation/d/1K_sa2x7ab5IEiVIBV9qZnVtmqpa5qrwZQz3S029QW4w/edit#slide=id.g2cd09dffa1c_0_283"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/17/2024 3:17\u202fAM",
-        "message": "feel free to add anything"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 3:20\u202fAM",
-        "message": "Im not gonna edit it until tomorrow but just so everyone is aware when they are that these are the things we need in it: Identify the name of the system\nThe goals of the software system\nThe Functional requirements - the proposed solution - Describe the key use cases\nThe Systems Architecture showing the external and internal interfaces, protocols, dB schema, APIs\nThe solution to address performance, security and error recovery\nSummarize technologies adopted \nIdentify professional conducts, possible ethical Issues, possible legal Issues with regard to your project. Describe your solutions (or protocols) for the identified professional conducts, ethical Issues and legal Issues\nProject Timeline\nSummary/Conclusion/Future work"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 3:25\u202fAM",
-        "message": "If we present using this, I can do 2,3 and cover my part of the project timeline."
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 3:25\u202fAM",
-        "message": ""
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/17/2024 3:33\u202fAM",
-        "message": "I had not seen that beforehand"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/17/2024 3:33\u202fAM",
-        "message": "Don't know where the timeline is, and will need other's input on ethical issues"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 4:39\u202fAM",
-        "message": "I can do 5 & 6"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 9:04\u202fPM",
-        "message": "Sorry haven\u2019t been on my computer. Will be submitting those a little later tonight. Please let me know if you\u2019re done making edits to user and technical guide"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 9:45\u202fPM",
-        "message": "@everyone do lab creation and group creation count as use cases too?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/17/2024 9:45\u202fPM",
-        "message": "Yea!"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 9:46\u202fPM",
-        "message": "Ok thanks"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 10:57\u202fPM",
-        "message": "I found that these slides allowed me to move around a bit more: https://docs.google.com/presentation/d/1hu2j97T1yV_E96WPLF03cXnuuFJWPl0lDD31CscAD9g/edit?usp=sharing"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/17/2024 11:28\u202fPM",
-        "message": "what backend tools are we using again? @Garrett Stallsmith @ashtoncorsello"
+        "timestamp": "4/16/2024 9:42\u202fPM",
+        "message": "Yep I\u2019ll push it shortly"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 12:24\u202fAM",
-        "message": "Mysql peewee flask"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 12:47\u202fAM",
-        "message": "unittest, docker also @omo"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 12:55\u202fAM",
-        "message": "redis as well @omo"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/18/2024 12:58\u202fAM",
-        "message": "Thank you."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 1:04\u202fAM",
-        "message": "I\u2019ll be submitting user guide and technical report at 10pm. @everyone"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 12:19\u202fPM",
-        "message": "@everyone who\u2019s computer can we run the demo on today?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 2:24\u202fPM",
-        "message": "anyone presenting the technologies? If not, I could describe them"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 2:24\u202fPM",
-        "message": "also just a gentle reminder to place names under slides you want to present. @everyone"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 2:25\u202fPM",
-        "message": "^^"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/18/2024 2:26\u202fPM",
-        "message": "Can we use yours? @ashtoncorsello"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/18/2024 2:26\u202fPM",
-        "message": "I\u2019m still getting that internal sever error."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 4:23\u202fPM",
-        "message": "@Terrelle Tettey I think I was planning on doing technologies"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 4:23\u202fPM",
-        "message": "Bullet points 5 and 6"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "If everyone could put down what they want to present so we can ensure everything gets covered"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 4:25\u202fPM",
-        "message": "Sounds good to me"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/18/2024 4:27\u202fPM",
-        "message": "I could do the demo if we have that up and running"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/18/2024 4:28\u202fPM",
-        "message": "2,3"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 4:32\u202fPM",
-        "message": "so I see 2 PPT presentations. Which are we presenting??"
+        "timestamp": "4/16/2024 10:24\u202fPM",
+        "message": "https://www.youtube.com/watch?v=ovUeI8NJ6eQ&ab_channel=QualityControlMusic"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 4:33\u202fPM",
-        "message": "Can I get the presentation shared with me gstallsm@kent.edu please"
+        "timestamp": "4/18/2024 5:43\u202fPM",
+        "message": "@Terrelle Tettey Can you check my architecture slides? Especially the docker stuff?"
+    },
+    {
+        "user_id": "ashtoncorsello",
+        "author": "ashtoncorsello",
+        "timestamp": "4/18/2024 5:49\u202fPM",
+        "message": "@Garrett Stallsmith i cant speak on any other parts, but id say the biggest reason for using redis is the ability to store much more data in the session than typically allowed. IDC if you have it in the slides or not but when talking about it make sure to mention thats why its being used. We are storing lots of information in the session to increase response time and allow for reloading of the edit page without uploading the scanned image again"
+    },
+    {
+        "user_id": "big_gert",
+        "author": "Garrett Stallsmith",
+        "timestamp": "4/18/2024 5:51\u202fPM",
+        "message": "Awesome. I knew it was to store more session data but I\u2019ll hit on the response time as well"
+    },
+    {
+        "user_id": "ashtoncorsello",
+        "author": "ashtoncorsello",
+        "timestamp": "4/18/2024 5:51\u202fPM",
+        "message": "yea its cause we dont need to query the database and wait for a response if we get a lot of the info up front and just store it. Update it when necessary"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 4:35\u202fPM",
-        "message": "This is one\n\nhttps://docs.google.com/presentation/d/1K_sa2x7ab5IEiVIBV9qZnVtmqpa5qrwZQz3S029QW4w/edit#slide=id.g2cd09dffa1c_0_283"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 4:35\u202fPM",
-        "message": "And another:\n\nhttps://docs.google.com/presentation/d/1hu2j97T1yV_E96WPLF03cXnuuFJWPl0lDD31CscAD9g/edit?usp=sharing"
+        "timestamp": "4/18/2024 5:55\u202fPM",
+        "message": "Sure! I\u2019ll take a quick look"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 4:41\u202fPM",
-        "message": "Thank you"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 4:41\u202fPM",
-        "message": "Which one are we using?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 4:42\u202fPM",
-        "message": "I think the second one"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 4:43\u202fPM",
-        "message": "Has anybody taken the goal / concept slides yet?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/18/2024 4:45\u202fPM",
-        "message": "Yeah that\u2019s what I have for 2,3"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 4:49\u202fPM",
-        "message": "What is there left to do then?"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 4:50\u202fPM",
-        "message": "I assumed you might do 4 on the list @Garrett Stallsmith but it\u2019s up to you"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 4:50\u202fPM",
-        "message": "Ok yeah that works for me"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 4:50\u202fPM",
-        "message": "Where did this stat come from?"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/18/2024 4:54\u202fPM",
-        "message": "I used the increase in speed of operations for that so almost twice as fast? I\u2019m not sure if it\u2019s exact"
-    },
-    {
-        "user_id": "ourgoodsir",
-        "author": "OurGoodSir",
-        "timestamp": "4/18/2024 4:54\u202fPM",
-        "message": "Is 7 even on the slides?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 4:58\u202fPM",
-        "message": "@ashtoncorsello Redis in a separate docker container right? And we're using redis to handle session data? Just wanna confirm before I say it out loud"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 5:01\u202fPM",
-        "message": "Yes, as far as I am aware redis is similar to MySQL as they are both databases, but redis is in-memory (stored in RAM) which makes it faster.  Redis is also NoSQL."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 5:01\u202fPM",
-        "message": "If you look at docker-compose.yaml, you can see the microqr container, MySQL container, and redis container all within the services"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 5:23\u202fPM",
-        "message": "Anyone doing ethical/legal issues?"
-    },
-    {
-        "user_id": "ttrocks",
-        "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 5:23\u202fPM",
-        "message": "Im doing professional conduct and potential solutions so if you want me to cover ethical/legal issues, I would."
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 5:44\u202fPM",
-        "message": "I dont think anyone has it yet, so if you could thatd be great"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 5:44\u202fPM",
-        "message": "And if chi wont be here for this presentation, we could either have someone talk about her parts, or we could just state that she she will be here during the final one"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "None",
-        "timestamp": "None",
-        "message": "and skip those parts"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
         "timestamp": "4/18/2024 5:57\u202fPM",
-        "message": "Hey just a quick reminder for the slides becuase he mentioned it a few classes ago, to not use periods on bullet points"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 5:59\u202fPM",
-        "message": "@everyone We should meet before class and do a practice run through. We can meet in person in Smith 121, and anybody who can't meet in person can just meet over discord"
+        "message": "OOOOHHHH I see"
     },
     {
         "user_id": "ttrocks",
         "author": "Terrelle Tettey",
-        "timestamp": "4/18/2024 6:00\u202fPM",
-        "message": "I could do 2:30."
+        "timestamp": "4/18/2024 6:05\u202fPM",
+        "message": "Yeah the docker part looks good"
+    },
+    {
+        "user_id": "ttrocks",
+        "author": "Terrelle Tettey",
+        "timestamp": "4/18/2024 6:05\u202fPM",
+        "message": "Those are pretty much the containers"
     },
     {
         "user_id": "big_gert",
         "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 6:25\u202fPM",
-        "message": "I'll be here"
-    },
-    {
-        "user_id": "ashtoncorsello",
-        "author": "ashtoncorsello",
-        "timestamp": "4/18/2024 6:26\u202fPM",
-        "message": "I can be around 3-315"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 6:27\u202fPM",
-        "message": "Do we have a laser pointer?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 6:27\u202fPM",
-        "message": "I could probably steal one from a classroom and return it later lol"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/18/2024 7:34\u202fPM",
-        "message": "Is the invitation code sent by email? @everyone"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 7:41\u202fPM",
-        "message": "No"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/18/2024 7:46\u202fPM",
-        "message": "How do lab members get the code?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/18/2024 9:54\u202fPM",
-        "message": "Sorry I didn't see this in time. But yeah it just gets shared by the lab admin"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/18/2024 10:22\u202fPM",
-        "message": "yup thanks"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/19/2024 4:39\u202fPM",
-        "message": "@omo @chi if you can get to campus before 1:30 we can get this code review done early"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/19/2024 4:39\u202fPM",
-        "message": "@omo we\u2019re just going to get this finished. We\u2019ll let you know when we\u2019re done"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/19/2024 4:45\u202fPM",
-        "message": "I thought we had the 1:30 slot"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/19/2024 4:45\u202fPM",
-        "message": "Has he started already?"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/19/2024 4:45\u202fPM",
-        "message": "Yes but you can still walk in"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/19/2024 4:45\u202fPM",
-        "message": "Okay"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/19/2024 4:46\u202fPM",
-        "message": "We just went early to get it done. We get graded as a group so you don\u2019t necessarily have to be here, especially because alex is here for front end questions"
-    },
-    {
-        "user_id": "omo2880",
-        "author": "omo",
-        "timestamp": "4/19/2024 4:50\u202fPM",
-        "message": "Okay on my way"
-    },
-    {
-        "user_id": "big_gert",
-        "author": "Garrett Stallsmith",
-        "timestamp": "4/19/2024 4:57\u202fPM",
-        "message": "@omo you dont have to come anymore we finished. If you want to make sure your attendance is taken then come but we wont be there"
+        "timestamp": "4/21/2024 2:22\u202fAM",
+        "message": "@Terrelle Tettey here's every message you sent in general"
     }
 ]

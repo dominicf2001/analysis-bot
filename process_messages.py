@@ -45,7 +45,7 @@ def remove_stop_words(tokens):
     filtered_words = []
 
     for word in non_stop_words:
-        if "/" not in word and "\\" not in word and "-" not in word and "'" not in word and "http" not in word and "." not in word:
+        if "/" not in word and "\\" not in word and "-" not in word and "'" not in word and "http" not in word and "." not in word and not "="  in word and not "_" in word:
             filtered_words.append(word)
 
     return filtered_words
