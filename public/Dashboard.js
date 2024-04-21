@@ -1,15 +1,15 @@
-function renderGraph(users) { 
-    const user = {
-       user_id: "123",
-       extrav: 15
-    };
+function renderGraph(user) { 
+    user = JSON.parse(user);
 
-    const data = [{
-        name: "User " + user.user_id,
-        value: user.extrav
-    }];
-
-    console.log(data);
+    const data = [];
+    for (const key in user){
+        if (key != "user_id"){
+            data.push({
+                name: key,
+                value: user[key]
+            });
+        }
+    }
 
     const svg = d3.select("svg"),
           margin = { top: 20, right: 20, bottom: 30, left: 40 },

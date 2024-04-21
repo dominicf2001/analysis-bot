@@ -23,14 +23,18 @@ export const app = createElysia()
   .get('dashboard', ctx => {
       return (
           <Layout>
-            <Dashboard></Dashboard>
+            <Dashboard user_id="1234"></Dashboard>
           </Layout>
     );
   })
   .get('users', async ctx => {
-      const users: User[] = db.query("select * from users natural join on types_big_five;").all() as User[];
+      const users: User[] = db.query("select * from users natural join types_big_five;").all() as User[];
       console.log(users);
       return users;
+  })
+  .get('user/:user_id', async ctx => {
+      const user: User = db.query("select * from users natural join types_big_five where user_id = ?;").get(ctx.params.user_id) as User;
+      return user;
   })
 
 export type App = typeof app;
