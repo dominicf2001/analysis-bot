@@ -55,13 +55,19 @@ def scrape_to_json(user_token, channel_id):
         
         message_element = container.find('span', class_='chatlog__markdown-preserve')
         message = message_element.text.strip() if message_element else ""
+
+
+        avatar_element = container.find('img', class_='chatlog__avatar')
+        avatar = avatar_element.text.strip() if avatar_element else ""
+        print(avatar_element)
         
         # Construct message dictionary
         message_data = {
             "user_id": user_id,
             "author": author,
             "timestamp": timestamp,
-            "message": message
+            "message": message,
+            "avatar": avatar
         }
         
         # Append message dictionary to list
@@ -72,4 +78,3 @@ def scrape_to_json(user_token, channel_id):
         json.dump(messages, json_file, indent=4)
 
     print("Messages have been parsed and saved to 'parsed_messages.json'")
-

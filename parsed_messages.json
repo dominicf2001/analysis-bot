@@ -3,360 +3,420 @@
         "user_id": "",
         "author": "",
         "timestamp": "",
-        "message": ""
+        "message": "",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/20/2024 5:23\u202fPM",
-        "message": "https://apify.com/curious_coder/discord-data-scraper/api/client/nodejs"
+        "message": "https://apify.com/curious_coder/discord-data-scraper/api/client/nodejs",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/20/2024 5:23\u202fPM",
-        "message": ""
+        "message": "",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/20/2024 6:07\u202fPM",
-        "message": "https://wevo.ai/takeapulse/?campaignid=20927810631&adgroupid=&adid=&utm_source=google&utm_medium=cross_network&utm_term=&utm_campaign=wevo_performance_max_us_canada&hsa_kw=&hsa_mt=&hsa_cam=20927810631&hsa_src=x&hsa_acc=2271504158&hsa_ad=&hsa_ver=3&hsa_grp=&hsa_tgt=&hsa_net=adwords&gad_source=1&gclid=CjwKCAjwz42xBhB9EiwA48pT7-OjXuQmG7ywJQyWMRjpqrM8p1LNAL_ZKxDCY354N_4AKe2sMsO3fRoCVmsQAvD_BwE\n\nAnalyzes website/wireframe once we make it to help analyze/suggest improvements making the website more friendly"
+        "message": "https://wevo.ai/takeapulse/?campaignid=20927810631&adgroupid=&adid=&utm_source=google&utm_medium=cross_network&utm_term=&utm_campaign=wevo_performance_max_us_canada&hsa_kw=&hsa_mt=&hsa_cam=20927810631&hsa_src=x&hsa_acc=2271504158&hsa_ad=&hsa_ver=3&hsa_grp=&hsa_tgt=&hsa_net=adwords&gad_source=1&gclid=CjwKCAjwz42xBhB9EiwA48pT7-OjXuQmG7ywJQyWMRjpqrM8p1LNAL_ZKxDCY354N_4AKe2sMsO3fRoCVmsQAvD_BwE\n\nAnalyzes website/wireframe once we make it to help analyze/suggest improvements making the website more friendly",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/20/2024 7:28\u202fPM",
-        "message": "https://www.youtube.com/watch?v=_jnG_EJSFBU&ab_channel=AnsontheDeveloper"
+        "message": "https://www.youtube.com/watch?v=_jnG_EJSFBU&ab_channel=AnsontheDeveloper",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/20/2024 7:28\u202fPM",
-        "message": "https://stackoverflow.com/questions/47947782/discordjs-fetch-all-channelsid-from-serverid?rq=3"
+        "message": "https://stackoverflow.com/questions/47947782/discordjs-fetch-all-channelsid-from-serverid?rq=3",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/20/2024 8:18\u202fPM",
-        "message": "git reset HEAD path/to/unwanted_file"
+        "message": "git reset HEAD path/to/unwanted_file",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/20/2024 9:08\u202fPM",
-        "message": "https://www.pcworld.com/article/2308047/scraper-spies-on-600-million-discord-users-and-sells-the-data.html"
+        "message": "https://www.pcworld.com/article/2308047/scraper-spies-on-600-million-discord-users-and-sells-the-data.html",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/20/2024 9:22\u202fPM",
-        "message": "https://en.wikipedia.org/wiki/Linear_programming#Simplex_algorithm_of_Dantzig"
+        "message": "https://en.wikipedia.org/wiki/Linear_programming#Simplex_algorithm_of_Dantzig",
+        "avatar": ""
     },
     {
         "user_id": "big_gert",
         "author": "Gert",
         "timestamp": "4/20/2024 10:44\u202fPM",
-        "message": "import { $ } from \"bun\";\n\nasync function exportDiscordChat() {\n    try {\n        // Output the result of the command to shell\n        await $cat ./gaming.txt;\n    } catch (error) {\n        console.error(\"Error:\", error);\n    }\n}\n\nexportDiscordChat();"
+        "message": "import { $ } from \"bun\";\n\nasync function exportDiscordChat() {\n    try {\n        // Output the result of the command to shell\n        await $cat ./gaming.txt;\n    } catch (error) {\n        console.error(\"Error:\", error);\n    }\n}\n\nexportDiscordChat();",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/20/2024 11:14\u202fPM",
-        "message": ""
+        "message": "",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/20/2024 11:23\u202fPM",
-        "message": "https://www.nltk.org/"
+        "message": "https://www.nltk.org/",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/20/2024 11:23\u202fPM",
-        "message": "https://www.datacamp.com/tutorial/text-analytics-beginners-nltk"
+        "message": "https://www.datacamp.com/tutorial/text-analytics-beginners-nltk",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "None",
         "timestamp": "None",
-        "message": ""
+        "message": "",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 12:39\u202fAM",
-        "message": "Stressed\nOverwhelmed\nAnnoyed\nNervous\nUnsure\nSorry\nWorried\nAfraid\nHesitant\nFrustrated\nTired\nUpset\nDoubtful\nPanicked\nDistressed\nTroubled\nUncomfortable\nConfused\nAgitated\nHelpless\nSad\nGuilty\nRegretful\nApprehensive\nAnxious"
+        "message": "Stressed\nOverwhelmed\nAnnoyed\nNervous\nUnsure\nSorry\nWorried\nAfraid\nHesitant\nFrustrated\nTired\nUpset\nDoubtful\nPanicked\nDistressed\nTroubled\nUncomfortable\nConfused\nAgitated\nHelpless\nSad\nGuilty\nRegretful\nApprehensive\nAnxious",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 12:39\u202fAM",
-        "message": "Kind\nCooperative\nSympathetic\nFriendly\nCompassionate\nTrustworthy\nWarm\nConsiderate\nGenerous\nHelpful\nPatient\nUnderstanding\nPolite\nSincere\nAltruistic\nGentle\nCourteous\nAmiable\nLoyal\nSupportive\nRespectful\nAffectionate\nGrateful\nEasygoing\nPeaceful"
+        "message": "Kind\nCooperative\nSympathetic\nFriendly\nCompassionate\nTrustworthy\nWarm\nConsiderate\nGenerous\nHelpful\nPatient\nUnderstanding\nPolite\nSincere\nAltruistic\nGentle\nCourteous\nAmiable\nLoyal\nSupportive\nRespectful\nAffectionate\nGrateful\nEasygoing\nPeaceful",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "None",
         "timestamp": "None",
-        "message": "Thanks\nPlease\nAppreciate\nWelcome\nAbsolutely\nDefinitely\nHappy\nWonderful\nLovely\nGreat\nSure\nTogether\nCaring\nShare\nSupport\nUnderstand\nRespect\nKindly\nPeace\nHarmony\nBless\nGrateful\nPleased\nGenerous\nCompassionate"
+        "message": "Thanks\nPlease\nAppreciate\nWelcome\nAbsolutely\nDefinitely\nHappy\nWonderful\nLovely\nGreat\nSure\nTogether\nCaring\nShare\nSupport\nUnderstand\nRespect\nKindly\nPeace\nHarmony\nBless\nGrateful\nPleased\nGenerous\nCompassionate",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 1:49\u202fAM",
-        "message": "https://discord.com/oauth2/authorize?client_id=1231407726848905267&permissions=274877975552&scope=bot+applications.commands"
+        "message": "https://discord.com/oauth2/authorize?client_id=1231407726848905267&permissions=274877975552&scope=bot+applications.commands",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 2:15\u202fAM",
-        "message": ""
+        "message": "",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 2:15\u202fAM",
-        "message": ""
+        "message": "",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 3:08\u202fAM",
-        "message": "/ping"
+        "message": "/ping",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 3:08\u202fAM",
-        "message": ".ping"
+        "message": ".ping",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "None",
         "timestamp": "None",
-        "message": "ping"
+        "message": "ping",
+        "avatar": ""
     },
     {
         "user_id": "big_gert",
         "author": "Gert",
         "timestamp": "4/21/2024 3:21\u202fAM",
-        "message": "gstallsm@kent.edu"
+        "message": "gstallsm@kent.edu",
+        "avatar": ""
     },
     {
         "user_id": "the_king_of_carrot_flowers",
         "author": "carrot",
         "timestamp": "4/21/2024 3:21\u202fAM",
-        "message": "dferran2@kent.edu"
+        "message": "dferran2@kent.edu",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 3:21\u202fAM",
-        "message": "https://devpost.com/software/650032/joins/ONansdvLQgY0LPrtUSYx_A"
+        "message": "https://devpost.com/software/650032/joins/ONansdvLQgY0LPrtUSYx_A",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 3:21\u202fAM",
-        "message": "Tired of grouping with grumpy, unpleasant folk? This bot will help you pick teammates based on personality, temperament, and recent attitudes, providing you with a more enjoyable experience."
+        "message": "Tired of grouping with grumpy, unpleasant folk? This bot will help you pick teammates based on personality, temperament, and recent attitudes, providing you with a more enjoyable experience.",
+        "avatar": ""
     },
     {
         "user_id": "the_king_of_carrot_flowers",
         "author": "carrot",
         "timestamp": "4/21/2024 3:46\u202fAM",
-        "message": ""
+        "message": "",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 3:56\u202fAM",
-        "message": "https://devpost.com/software/personality-analysis-bot"
+        "message": "https://devpost.com/software/personality-analysis-bot",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 4:14\u202fAM",
-        "message": "https://spacy.io/"
+        "message": "https://spacy.io/",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 5:21\u202fAM",
-        "message": "Pong!"
+        "message": "Pong!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:18\u202fAM",
-        "message": "Pong!"
+        "message": "Pong!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:19\u202fAM",
-        "message": "Pong!"
+        "message": "Pong!",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 6:21\u202fAM",
-        "message": "ping"
+        "message": "ping",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:21\u202fAM",
-        "message": "Pong!"
+        "message": "Pong!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:23\u202fAM",
-        "message": "Pong!"
+        "message": "Pong!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:23\u202fAM",
-        "message": "Pong!"
+        "message": "Pong!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:24\u202fAM",
-        "message": "complete!"
+        "message": "complete!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:27\u202fAM",
-        "message": "complete!"
+        "message": "complete!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:27\u202fAM",
-        "message": "complete!"
+        "message": "complete!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:30\u202fAM",
-        "message": "complete!"
+        "message": "complete!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:30\u202fAM",
-        "message": "complete!"
+        "message": "complete!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:32\u202fAM",
-        "message": "complete!"
+        "message": "complete!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:36\u202fAM",
-        "message": "complete!"
+        "message": "complete!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:39\u202fAM",
-        "message": "complete!"
+        "message": "complete!",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:46\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:49\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:55\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:57\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 6:58\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 7:00\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 7:01\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 7:30\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 7:31\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 8:41\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 8:41\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 8:46\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "awkward0001",
         "author": "Joseph",
         "timestamp": "4/21/2024 8:52\u202fAM",
-        "message": "https://discord.com/oauth2/authorize?client_id=1231407726848905267&permissions=826781846656&scope=bot+applications.commands"
+        "message": "https://discord.com/oauth2/authorize?client_id=1231407726848905267&permissions=826781846656&scope=bot+applications.commands",
+        "avatar": ""
     },
     {
         "user_id": "PABL0#4904",
         "author": "PABL0",
         "timestamp": "4/21/2024 9:26\u202fAM",
-        "message": "channel.id"
+        "message": "channel.id",
+        "avatar": ""
     },
     {
         "user_id": "big_gert",
         "author": "Gert",
         "timestamp": "4/21/2024 9:58\u202fAM",
-        "message": "hate I hate I hate"
+        "message": "hate I hate I hate",
+        "avatar": ""
     }
 ]
